@@ -2,10 +2,10 @@
   <div class="home">
     <b-jumbotron
       header="NAK-Sued.stream"
-      lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschland"
+      lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
     >
       <b-row>
-        <b-col md="6">
+        <b-col md="4">
           <b-img
             class="logo"
             src="@/assets/logo.png"
@@ -14,7 +14,19 @@
         </b-col>
         <b-col>
           <div class="description">
-            <p>Du kaufst ein Produkt?</p>
+            <p>
+              Link-Support für die Live-Streams der Gottesdienste der
+              Neuapostolischen Kirche Süddeutschland.
+            </p>
+            <p>
+              Ein privates Projekt zur Unterstützung der Gemeinden.
+            </p>
+            <b-button
+              variant="primary"
+              to="/anfrage"
+            >
+              Anfrage stellen &hellip;
+            </b-button>
           </div>
         </b-col>
       </b-row>
@@ -22,18 +34,24 @@
     <section>
       <b-row>
         <b-col md="6">
-          <h2>xxx</h2>
+          <h2>Live-Streams für die Gemeinden</h2>
           <p>
-            xxx
+            Plattformen, wie YouTube legen für jedes Live-Stream-Event umständliche Links an,
+            die man sich ncihtmerken kann. Dieser Service soll den gemeinden helfen dies zu ändern.
+          </p>
+          <p>
+            Voraussetzung ist der Zugang zum Content Management System, das für alle Gemeinden
+            und Kirchenbezirke in Süddeutschland zur Verfügung steht.
           </p>
         </b-col>
         <b-col>
           <div class="bible-text">
             <p>
-              xxx
+              Und er sprach zu ihnen: Gehet hin in alle Welt
+              und predigt das Evangelium aller Kreatur.
             </p>
             <p>
-              &dash; xxx
+              &dash; Markus 16,15
             </p>
           </div>
         </b-col>
@@ -51,14 +69,6 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
-.jumbotron {
-
-  .description {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-  }
-}
 
 .bible-text {
   text-decoration:none;

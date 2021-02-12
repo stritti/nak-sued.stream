@@ -27,13 +27,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
-  .content {
-    flex-grow: 1;
-    min-height: 100%;
-  }
-  .navbar, .content, footer {
-    flex-shrink: 0;
-  }
+}
+.content {
+  flex-grow: 1;
+  min-height: calc(100vh - 120px);
+  height: 100%;
+}
+.navbar, .content, footer {
+  flex-shrink: 0;
 }
 </style>
