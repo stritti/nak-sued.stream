@@ -11,10 +11,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/stream/:url',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Streams.vue')
-  },
-  {
     path: '/kontakt',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },
@@ -29,8 +25,11 @@ const routes = [
   {
     path: '/about',
     component: () => import(/* webpackChunkName: "imprint" */ '../views/About.vue')
+  },
+  {
+    path: '/:url',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Streams.vue')
   }
-
 ]
 
 const router = new VueRouter({
