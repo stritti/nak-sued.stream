@@ -1,0 +1,41 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/stream/:url',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Streams.vue')
+  },
+  {
+    path: '/kontakt',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+  },
+  {
+    path: '/impessum',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/Imprint.vue')
+  },
+  {
+    path: '/privacy',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
+  },
+  {
+    path: '/about',
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/About.vue')
+  }
+
+]
+
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+})
+
+export default router
