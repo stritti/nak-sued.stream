@@ -8,7 +8,7 @@
               to="/"
               class="nav-link"
             >
-              &copy; {{ year }} - NAK-Süd.stream
+              &copy; {{ year }} NAK-Sued.stream
             </router-link>
           </b-col>
           <b-col>

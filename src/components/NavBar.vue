@@ -5,9 +5,12 @@
     toggleable="md"
   >
     <b-container>
-      <b-navbar-brand to="/">
+      <b-navbar-brand
+        to="/"
+        title="Nak-Sued.stream"
+      >
         <b-img
-          class="logo"
+          class="d-inline-block align-top"
           src="@/assets/logo.png"
           height="30"
         />

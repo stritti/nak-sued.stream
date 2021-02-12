@@ -1,5 +1,5 @@
 <template>
-  <b-card>
+  <b-card class="event">
     <template #header>
       <h4 v-text="event.name" />
     </template>
@@ -52,5 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.event {
+  min-width: 340px;
+}
 </style>

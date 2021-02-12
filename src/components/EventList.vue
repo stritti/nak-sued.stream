@@ -46,6 +46,10 @@ export default {
             this.eventList = result
           })
       })
+      .catch(ex => {
+        console.log('error', ex)
+        this.$router.push('/')
+      })
   }
 }
 </script>
