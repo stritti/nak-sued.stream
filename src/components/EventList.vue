@@ -20,35 +20,29 @@
 
 <script>
 import buuiltCalendar from '@/services/buuiltCalendar.service'
-import congregationService from '@/services/congregation.service'
 import EventItem from './EventItem.vue'
 export default {
   name: 'SupporterList',
   components: { EventItem },
   props: {
-    url: {
+    feedUrl: {
       type: String,
       required: true
     }
   },
   data () {
     return {
-      eventList: null
+      eventList: null,
+      isLoading: true
     }
   },
   created () {
-    congregationService.get(this.url)
+    buuiltCalendar.getList(this.feedUrl)
       .then(result => {
-        this.congregation = result
-        console.log(this.congregation)
-        buuiltCalendar.getList(this.congregation[0].Feed)
-          .then(result => {
-            this.eventList = result
-          })
+        this.eventList = result
       })
-      .catch(ex => {
-        console.log('error', ex)
-        this.$router.push('/')
+      .finally(() => {
+        this.isLoading = false
       })
   }
 }

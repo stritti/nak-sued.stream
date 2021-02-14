@@ -24,7 +24,7 @@ const congregationService = {
       }
     })
 
-    return resultList
+    return resultList[0]
   }
 }
 
