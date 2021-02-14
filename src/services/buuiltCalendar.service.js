@@ -17,7 +17,7 @@ const buuiltCalendarService = {
     })
 
     // sort ascending by start date
-    resultList.sort((a, b) => b.start.getTime() - a.start.getTime())
+    resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
 
     return resultList
   }
