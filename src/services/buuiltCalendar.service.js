@@ -15,6 +15,10 @@ const buuiltCalendarService = {
     resultList = resultList.filter((item) => {
       return item.end > new Date() && item.state === 'latest'
     })
+
+    // sort ascending by start date
+    resultList.sort((a, b) => b.start.getTime() - a.start.getTime())
+
     return resultList
   }
 }
