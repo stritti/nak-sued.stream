@@ -1,40 +1,55 @@
 <template>
   <div class="streams">
-    <h1>Live Streams</h1>
-    <p>
-      Folgende Livestreams sind geplant:
-    </p>
-    <event-list
-      v-if="congregation"
-      :feed-url="congregation.Feed"
-    />
+    <template v-if="congregation">
+      <h1>Live Streams</h1>
+      <h2 v-text="congregation.Name" />
+      <p>
+        Folgende Livestreams sind geplant:
+      </p>
+      <event-list
+        v-if="congregation"
+        :feed-url="congregation.Feed"
+      />
+    </template>
+    <template v-else>
+      <div class="input-wrapper">
+        Pin:
+        <code-input
+          :loading="false"
+          class="input"
+          :fields="5"
+          title="Pin"
+          @complete="onPinComplete"
+        />
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
 import congregationService from '@/services/congregation.service'
+import CodeInput from 'vue-verification-code-input'
 import EventList from '@/components/EventList.vue'
 
 export default {
   name: 'Stream',
-  components: { EventList },
+  components: { CodeInput, EventList },
   data () {
     return {
       congregation: null
-
     }
   },
-  created () {
-    this.loadCongregation()
-  },
   methods: {
-    loadCongregation () {
-      congregationService.get(this.$route.params.url)
+    onPinComplete (pin) {
+      this.loadCongregation(this.$route.params.url, pin)
+    },
+    loadCongregation (slug, pin) {
+      congregationService.get(slug, pin)
         .then(result => {
           if (result) {
             this.congregation = result
           } else {
-            this.$router.push('/')
+            this.$router.go()
           }
         })
         .catch(ex => {
