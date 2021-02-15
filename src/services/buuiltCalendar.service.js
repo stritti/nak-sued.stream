@@ -9,6 +9,9 @@ const buuiltCalendarService = {
         start: new Date(item[66] * 1000),
         end: new Date(item[67] * 1000),
         location: item[68],
+        description: item[69],
+        organizer: item[71],
+        tags: item[73],
         state: item.state
       }
     })
