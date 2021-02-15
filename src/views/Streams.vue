@@ -2,7 +2,7 @@
   <div class="streams">
     <template v-if="isLoading">
       <div
-        class="d-flex align-items-center loading"
+        class="my-5 mx-auto align-items-center loading"
       >
         <b-spinner /> Lade Daten &hellip;
       </div>
@@ -19,14 +19,23 @@
       />
     </template>
     <template v-else>
-      <div class="input-wrapper">
-        <code-input
-          class="input"
-          :fields="5"
-          title="Pin-Code"
-          @complete="onPinComplete"
-        />
-      </div>
+      <b-card
+        v-if="!isLoading"
+        title="Pin-Code"
+        style="max-width: 20rem;"
+        class="mx-auto my-5 align-items-center"
+      >
+        <b-card-text>
+          <code-input
+            class="input"
+            :fields="5"
+            @complete="onPinComplete"
+          />
+        </b-card-text>
+        <b-card-text class="text-muted">
+          Bitte Pin-Code eingeben.
+        </b-card-text>
+      </b-card>
     </template>
   </div>
 </template>
@@ -55,8 +64,6 @@ export default {
         .then(result => {
           if (result) {
             this.congregation = result
-          } else {
-            this.$router.go()
           }
         })
         .catch(ex => {
@@ -70,3 +77,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.react-code-input {
+  > input {
+    font-family: var(--font-family-monospace) !important
+  }
+}
+</style>

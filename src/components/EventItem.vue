@@ -4,26 +4,35 @@
       <h4 v-text="event.name" />
     </template>
     <b-card-text>
-      <div>
-        <span v-if="event.start">
-          {{ startDate }}
-        </span>
-        &dash;
-        <span v-if="event.end">
-          {{ endDate }}
-        </span>
-      </div>
+      <span v-if="event.start">
+        {{ startDate }}
+      </span>
+      &dash;
+      <span v-if="event.end">
+        {{ endDate }}
+      </span>
+    </b-card-text>
+    <!-- b-card-text v-if="videoId">
+      <youtube :video-id="videoId" />
+    </!-->
+    <b-card-text>
       <a
         v-if="event.location"
         :href="event.location"
       >
-        {{ event.location }}
+        <b-img
+          class="d-inline-block align-top"
+          src="@/assets/logo.png"
+          height="20"
+        /> {{ event.location }}
       </a>
     </b-card-text>
+    <b-card-text v-text="event.description" />
   </b-card>
 </template>
 
 <script>
+import { getIdFromURL } from 'vue-youtube-embed'
 export default {
   name: 'EventItem',
   props: {
@@ -46,6 +55,9 @@ export default {
         return this.event.end.toLocaleString('de-DE', options)
       }
       return ''
+    },
+    videoId () {
+      return getIdFromURL(this.event.location)
     }
   }
 }
