@@ -11,7 +11,8 @@
     </b-card-group>
     <div
       v-else
-      class="d-flex align-items-center loading"
+      style="max-width: 20rem;"
+      class="mx-auto my-5 align-items-center"
     >
       <b-spinner /> Lade Daten &hellip;
     </div>
@@ -47,12 +48,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.loading {
-  min-height: 200px;
-  .spinner-border {
-    margin-right: 0.5rem;
-  }
-}
-</style>

@@ -26,6 +26,9 @@
           <b-nav-item to="/kontakt">
             Kontakt
           </b-nav-item>
+          <b-nav-item to="/documentation">
+            Dokumentation
+          </b-nav-item>
           <b-nav-item to="/about">
             Über
           </b-nav-item>

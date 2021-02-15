@@ -2,6 +2,7 @@
   <div class="streams">
     <template v-if="isLoading">
       <div
+        style="max-width: 20rem;"
         class="my-5 mx-auto align-items-center loading"
       >
         <b-spinner /> Lade Daten &hellip;

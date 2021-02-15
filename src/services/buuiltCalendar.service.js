@@ -16,7 +16,17 @@ const buuiltCalendarService = {
       }
     })
     resultList = resultList.filter((item) => {
-      return item.end > new Date() && item.state === 'latest'
+      if (item.state !== 'latest') return false
+
+      const today = new Date()
+      const yesterday = new Date(today)
+      yesterday.setDate(yesterday.getDate() - 1)
+
+      if (item.end) {
+        return item.end >= yesterday
+      } else {
+        return item.start >= yesterday
+      }
     })
 
     // sort ascending by start date

@@ -15,6 +15,10 @@ const routes = [
     component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue')
   },
   {
+    path: '/documentation',
+    component: () => import(/* webpackChunkName: "doc" */ '../views/Documentation.vue')
+  },
+  {
     path: '/kontakt',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   },
@@ -32,7 +36,7 @@ const routes = [
   },
   {
     path: '/:url',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Streams.vue')
+    component: () => import(/* webpackChunkName: "streams" */ '../views/Streams.vue')
   }
 ]
 

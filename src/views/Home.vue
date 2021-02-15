@@ -36,12 +36,18 @@
         <b-col md="6">
           <h2>Live-Streams für die Gemeinden</h2>
           <p>
-            Plattformen, wie YouTube legen für jedes Live-Stream-Event umständliche Links an,
-            die man sich ncihtmerken kann. Dieser Service soll den gemeinden helfen dies zu ändern.
+            Plattformen, wie YouTube, legen für jedes Live-Stream-Event
+            umständliche Links an, die man sich nicht merken kann.
+            Dieser Service soll den Gemeinden helfen dies zu vereinfachen.
           </p>
           <p>
-            Voraussetzung ist der Zugang zum Content Management System, das für alle Gemeinden
-            und Kirchenbezirke in Süddeutschland zur Verfügung steht.
+            Voraussetzung ist der Zugang zum Content Management System,
+            das für alle Gemeinden und Kirchenbezirke in Süddeutschland
+            zur Verfügung steht. Weiteres folgt in der
+            <router-link
+              to="/documentation"
+              v-text="'Dokumentation'"
+            />.
           </p>
         </b-col>
         <b-col>
