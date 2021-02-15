@@ -1,5 +1,12 @@
 <template>
   <div class="streams">
+    <template v-if="isLoading">
+      <div
+        class="d-flex align-items-center loading"
+      >
+        <b-spinner /> Lade Daten &hellip;
+      </div>
+    </template>
     <template v-if="congregation">
       <h1>Live Streams</h1>
       <h2 v-text="congregation.Name" />
@@ -13,12 +20,10 @@
     </template>
     <template v-else>
       <div class="input-wrapper">
-        Pin:
         <code-input
-          :loading="false"
           class="input"
           :fields="5"
-          title="Pin"
+          title="Pin-Code"
           @complete="onPinComplete"
         />
       </div>
@@ -36,7 +41,8 @@ export default {
   components: { CodeInput, EventList },
   data () {
     return {
-      congregation: null
+      congregation: null,
+      isLoading: false
     }
   },
   methods: {
@@ -44,6 +50,7 @@ export default {
       this.loadCongregation(this.$route.params.url, pin)
     },
     loadCongregation (slug, pin) {
+      this.isLoading = true
       congregationService.get(slug, pin)
         .then(result => {
           if (result) {
@@ -55,6 +62,9 @@ export default {
         .catch(ex => {
           console.error('error', ex)
           this.$router.push('/')
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     }
   }
