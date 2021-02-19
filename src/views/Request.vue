@@ -4,3 +4,12 @@
     <p>Kommt bald ...</p>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Request',
+  metaInfo: {
+    title: 'Anfrage'
+  }
+}
+</script>

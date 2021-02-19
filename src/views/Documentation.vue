@@ -18,3 +18,12 @@
     </b-form-group>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Documentation',
+  metaInfo: {
+    title: 'Dokumentation'
+  }
+}
+</script>

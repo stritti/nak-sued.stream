@@ -12,7 +12,13 @@
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
 export default {
-  components: { NavBar, FooterBar }
+  components: { NavBar, FooterBar },
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'NAK-Sued.stream',
+    // all titles will be injected into this template
+    titleTemplate: '%s | NAK-Sued.stream'
+  }
 }
 </script>
 

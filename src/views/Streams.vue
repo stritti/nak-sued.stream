@@ -49,6 +49,9 @@ import EventList from '@/components/EventList.vue'
 export default {
   name: 'Stream',
   components: { CodeInput, EventList },
+  metaInfo: {
+    title: 'Stream'
+  },
   data () {
     return {
       congregation: null,

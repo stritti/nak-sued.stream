@@ -9,6 +9,9 @@
 import ContactForm from '@/components/ContactForm.vue'
 
 export default {
-  components: { ContactForm }
+  components: { ContactForm },
+  metaInfo: {
+    title: 'Kontakt'
+  }
 }
 </script>

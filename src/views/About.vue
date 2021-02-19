@@ -4,3 +4,12 @@
     <p>Kommt bald ...</p>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'About',
+  metaInfo: {
+    title: 'Über NAK-Süd.stream'
+  }
+}
+</script>
