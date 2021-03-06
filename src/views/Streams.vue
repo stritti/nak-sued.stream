@@ -19,6 +19,24 @@
         :feed-url="congregation.Feed"
         :url-field="congregation.Field"
       />
+      <b-row>
+        <b-col
+          class="mt-5"
+          md="6"
+          sm="12"
+        >
+          <streaming-notes :notes="congregation.Notes" />
+        </b-col>
+        <b-col
+          class="mt-5"
+          md="6"
+          sm="12"
+        >
+          <streaming-contact
+            :congregation="congregation"
+          />
+        </b-col>
+      </b-row>
     </template>
     <template v-else>
       <b-card
@@ -46,10 +64,12 @@
 import congregationService from '@/services/congregation.service'
 import CodeInput from 'vue-verification-code-input'
 import EventList from '@/components/EventList.vue'
+import StreamingContact from '../components/StreamingContact.vue'
+import StreamingNotes from '../components/StreamingNotes.vue'
 
 export default {
   name: 'Stream',
-  components: { CodeInput, EventList },
+  components: { CodeInput, EventList, StreamingContact, StreamingNotes },
   metaInfo: {
     title: 'Stream'
   },
