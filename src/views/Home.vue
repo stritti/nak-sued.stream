@@ -23,7 +23,7 @@
             </p>
             <b-button
               variant="primary"
-              to="/anfrage"
+              to="/documentation"
             >
               Anfrage stellen &hellip;
             </b-button>
