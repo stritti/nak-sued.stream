@@ -4,13 +4,9 @@
       <h4 v-text="event.name" />
     </template>
     <b-card-text>
-      <span v-if="event.start">
-        {{ startDate }}
-      </span>
-      &dash;
-      <span v-if="event.end">
-        {{ endDate }}
-      </span>
+      <strong v-if="event.start">
+        {{ startDate }} Uhr
+      </strong>
     </b-card-text>
     <!-- b-card-text v-if="videoId">
       <youtube :video-id="videoId" />
