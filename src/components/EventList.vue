@@ -33,6 +33,10 @@ export default {
     feedUrl: {
       type: String,
       required: true
+    },
+    urlField: {
+      type: String,
+      required: true
     }
   },
   data () {
@@ -54,8 +58,9 @@ export default {
   methods: {
     loadCalendar () {
       this.eventList = []
-      buuiltCalendar.getList(this.feedUrl)
+      buuiltCalendar.getList(this.feedUrl, this.urlField)
         .then(result => {
+          console.log(result)
           this.eventList = result
           this.error = false
         })

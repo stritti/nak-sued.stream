@@ -17,14 +17,14 @@
     </!-->
     <b-card-text>
       <a
-        v-if="event.location"
-        :href="event.location"
+        v-if="event.url"
+        :href="event.url"
       >
         <b-img
           class="d-inline-block align-top"
           src="@/assets/logo.png"
           height="20"
-        /> {{ event.location }}
+        /> {{ event.url }}
       </a>
     </b-card-text>
     <b-card-text v-text="event.description" />
@@ -57,7 +57,7 @@ export default {
       return ''
     },
     videoId () {
-      return getIdFromURL(this.event.location)
+      return getIdFromURL(this.event.url)
     }
   }
 }

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const buuiltCalendarService = {
-  async getList (feed) {
+  async getList (feed, urlField) {
     const response = await axios.get(feed)
     let resultList = response.data.items.map((item) => {
       return {
@@ -32,6 +32,12 @@ const buuiltCalendarService = {
 
     // sort ascending by start date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
+    resultList = resultList.map((item) => {
+      return {
+        url: item[urlField],
+        ...item
+      }
+    })
     return resultList
   }
 }

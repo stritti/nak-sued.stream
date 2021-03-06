@@ -17,6 +17,7 @@
       <event-list
         v-if="congregation"
         :feed-url="congregation.Feed"
+        :url-field="congregation.Field"
       />
     </template>
     <template v-else>
