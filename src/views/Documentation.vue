@@ -57,7 +57,7 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
         Ist er korrekt, so sollte eine Vorschau des Kalenders rechts angezeigt werden.
       </p>
       <p>
-        Danach sind noch ein paar Angeben notwendig.
+        Danach sind noch ein paar Angaben notwendig.
       </p>
       <b-form @submit.prevent="testFeed">
         <b-form-group
