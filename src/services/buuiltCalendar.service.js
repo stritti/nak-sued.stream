@@ -16,8 +16,16 @@ const buuiltCalendarService = {
       }
     })
 
+    resultList = resultList.map((item) => {
+      return {
+        url: item[urlField],
+        ...item
+      }
+    })
+
     resultList = resultList.filter((item) => {
       if (item.state !== 'latest') return false
+      if (item.url === null || item.url === '') return false
 
       const today = new Date()
       const yesterday = new Date(today)
@@ -32,12 +40,7 @@ const buuiltCalendarService = {
 
     // sort ascending by start date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
-    resultList = resultList.map((item) => {
-      return {
-        url: item[urlField],
-        ...item
-      }
-    })
+
     return resultList
   }
 }
