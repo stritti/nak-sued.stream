@@ -9,31 +9,34 @@
       </div>
     </template>
     <template v-if="congregation">
-      <h1>Live Streams</h1>
+      <h1>Live-Streams</h1>
       <h2 v-text="congregation.Name" />
       <p>
-        Folgende Live Streams sind geplant:
+        Folgende Live-Streams sind geplant:
       </p>
-      <event-list
-        v-if="congregation"
-        :feed-url="congregation.Feed"
-        :url-field="congregation.Field"
-      />
       <b-row>
         <b-col
-          class="mt-5"
-          md="6"
+          md="8"
           sm="12"
         >
-          <streaming-notes :notes="congregation.Notes" />
+          <event-list
+            v-if="congregation"
+            :feed-url="congregation.Feed"
+            :url-field="congregation.Field"
+          />
         </b-col>
         <b-col
-          class="mt-5"
-          md="6"
+          md="4"
           sm="12"
         >
+          <streaming-notes
+            :notes="congregation.Notes"
+            class="mt-3"
+          />
+
           <streaming-contact
             :congregation="congregation"
+            class="mt-3"
           />
         </b-col>
       </b-row>
