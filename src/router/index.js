@@ -27,7 +27,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "imprint" */ '../views/Imprint.vue')
   },
   {
-    path: '/privacy',
+    path: '/datenschutz',
     component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
   },
   {

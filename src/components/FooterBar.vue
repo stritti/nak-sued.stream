@@ -21,7 +21,7 @@
           </b-col>
           <b-col>
             <router-link
-              to="/privacy"
+              to="/datenschutz"
               class="nav-link"
             >
               Datenschutz
