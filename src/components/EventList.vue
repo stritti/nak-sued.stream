@@ -1,14 +1,13 @@
 <template>
   <div>
-    <b-card-group
-      v-if="eventList"
-    >
+    <template v-if="eventList">
       <event-item
         v-for="event in eventList"
         :key="event.id"
         :event="event"
+        class="my-3"
       />
-    </b-card-group>
+    </template>
     <div
       v-if="isLoading"
       style="max-width: 20rem;"
