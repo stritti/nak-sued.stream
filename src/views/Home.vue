@@ -34,9 +34,9 @@
     <section>
       <b-row>
         <b-col md="6">
-          <h2>Live-Streams für die Gemeinden</h2>
+          <h2>Livestreams für die Gemeinden</h2>
           <p>
-            Plattformen, wie YouTube, legen für jedes Live-Stream-Event
+            Plattformen, wie YouTube, legen für jedes Livestream-Event
             umständliche Links an, die man sich nicht merken kann.
             Dieser Service soll den Gemeinden helfen dies zu vereinfachen.
           </p>

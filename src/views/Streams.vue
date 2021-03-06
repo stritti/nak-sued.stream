@@ -9,10 +9,10 @@
       </div>
     </template>
     <template v-if="congregation">
-      <h1>Live-Streams</h1>
+      <h1>Livestreams</h1>
       <h2 v-text="congregation.Name" />
       <p>
-        Folgende Live-Streams sind geplant:
+        Folgende Livestreams sind geplant:
       </p>
       <b-row>
         <b-col
@@ -24,6 +24,10 @@
             :feed-url="congregation.Feed"
             :url-field="congregation.Field"
           />
+          <p>
+            Bitte beachten Sie, dass bei dem Besuch des Livestreams
+            Ihre personenbezogenen Daten von YouTube verarbeitet werden.
+          </p>
         </b-col>
         <b-col
           md="4"
