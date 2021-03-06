@@ -12,7 +12,7 @@
       <h1>Live Streams</h1>
       <h2 v-text="congregation.Name" />
       <p>
-        Folgende Livestreams sind geplant:
+        Folgende Live Streams sind geplant:
       </p>
       <event-list
         v-if="congregation"
