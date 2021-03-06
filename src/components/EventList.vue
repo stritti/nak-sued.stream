@@ -10,12 +10,16 @@
       />
     </b-card-group>
     <div
-      v-else
+      v-if="isLoading"
       style="max-width: 20rem;"
       class="mx-auto my-5 align-items-center"
     >
       <b-spinner /> Lade Daten &hellip;
     </div>
+    <div
+      v-if="error"
+      v-text="error"
+    />
   </div>
 </template>
 
@@ -34,17 +38,34 @@ export default {
   data () {
     return {
       eventList: null,
-      isLoading: true
+      isLoading: true,
+      error: null
+    }
+  },
+  watch: {
+    feedUrl (newVal, oldVal) { // watch it
+      console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+      this.loadCalendar()
     }
   },
   created () {
-    buuiltCalendar.getList(this.feedUrl)
-      .then(result => {
-        this.eventList = result
-      })
-      .finally(() => {
-        this.isLoading = false
-      })
+    this.loadCalendar()
+  },
+  methods: {
+    loadCalendar () {
+      this.eventList = []
+      buuiltCalendar.getList(this.feedUrl)
+        .then(result => {
+          this.eventList = result
+          this.error = false
+        })
+        .catch(ex => {
+          this.error = ex
+        })
+        .finally(() => {
+          this.isLoading = false
+        })
+    }
   }
 }
 </script>
