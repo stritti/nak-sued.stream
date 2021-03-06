@@ -25,6 +25,29 @@ const congregationService = {
     })
 
     return resultList[0]
+  },
+  async request (data) {
+    const response = await airtableBase.post(`${BASE}`, {
+      records: [
+        {
+          fields: {
+            ...data,
+            pin: Number(data.pin),
+            Status: 'Requested',
+            Field: 'organizer'
+
+          }
+        }
+      ]
+    })
+    if (response.status === 200) {
+      return {
+        ...response.data.records[0].fields,
+        id: response.data.records[0].id
+      }
+    } else {
+      return null
+    }
   }
 }
 
