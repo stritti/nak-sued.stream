@@ -7,7 +7,7 @@ const buuiltCalendarService = {
       return {
         name: item[65],
         start: new Date(item[66] * 1000),
-        end: new Date(item[67] * 1000),
+        end: (item[67] === null ? new Date(item[66] * 1000 + (60 * 60 * 1000)) : new Date(item[67] * 1000)),
         location: item[68],
         description: item[69],
         organizer: item[71],
@@ -15,6 +15,7 @@ const buuiltCalendarService = {
         state: item.state
       }
     })
+
     resultList = resultList.filter((item) => {
       if (item.state !== 'latest') return false
 
@@ -31,7 +32,6 @@ const buuiltCalendarService = {
 
     // sort ascending by start date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
-
     return resultList
   }
 }
