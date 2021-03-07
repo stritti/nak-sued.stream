@@ -12,7 +12,7 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
         Livestreams über diese Seite angeboten werden können.<br>
         Für Erweitungen oder Anpassungen, bitte mit dem
         <router-link to="/kontakt">
-          Entwicker kontakt aufnehmen
+          Entwicker Kontakt aufnehmen
         </router-link>.
       </p>
       <ol>
