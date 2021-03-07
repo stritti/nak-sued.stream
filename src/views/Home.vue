@@ -23,7 +23,7 @@
             </p>
             <b-button
               variant="primary"
-              to="/documentation"
+              to="/hilfe"
             >
               Anfrage stellen &hellip;
             </b-button>
@@ -45,7 +45,7 @@
             das für alle Gemeinden und Kirchenbezirke in Süddeutschland
             zur Verfügung steht. Weiteres folgt in der
             <router-link
-              to="/documentation"
+              to="/hilfe"
               v-text="'Dokumentation'"
             />.
           </p>

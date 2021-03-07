@@ -13,13 +13,31 @@
           </b-col>
           <b-col>
             <router-link
+              to="/about"
+              class="nav-link"
+            >
+              Über NAK-Sued.stream
+            </router-link>
+            <router-link
+              to="/hilfe"
+              class="nav-link"
+            >
+              Hilfe
+            </router-link>
+          </b-col>
+          <b-col>
+            <router-link
+              to="/kontakt"
+              class="nav-link"
+            >
+              Kontakt
+            </router-link>
+            <router-link
               to="/impessum"
               class="nav-link"
             >
               Impressum
             </router-link>
-          </b-col>
-          <b-col>
             <router-link
               to="/datenschutz"
               class="nav-link"

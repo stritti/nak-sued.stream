@@ -11,9 +11,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/documentation',
+    path: '/hilfe',
     name: 'Documentation',
-    component: () => import(/* webpackChunkName: "doc" */ '../views/Documentation.vue')
+    component: () => import(/* webpackChunkName: "help" */ '../views/Documentation.vue')
   },
   {
     path: '/requested',
