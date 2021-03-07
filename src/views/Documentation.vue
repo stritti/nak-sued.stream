@@ -226,10 +226,10 @@ export default {
     testFeed () {
       if (this.requestData.Feed) {
         this.testingFeed = this.requestData.Feed
+        this.requestData.pin = this.randomIntFromInterval(11111, 99999)
       }
     },
     submitRequest () {
-      console.log(this.requestData)
       congregationService.request(this.requestData)
         .then((result) => {
           console.log(result)
@@ -238,6 +238,9 @@ export default {
     },
     pinFormatter (e) {
       return String(e).substring(0, 5)
+    },
+    randomIntFromInterval (min, max) { // min and max included
+      return Math.floor(Math.random() * (max - min + 1) + min)
     }
   }
 }
