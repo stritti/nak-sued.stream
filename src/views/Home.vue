@@ -15,7 +15,7 @@
         <b-col>
           <div class="description">
             <p>
-              Link-Support für die Live-Streams der Gottesdienste der
+              Link-Support für die Livestreams der Gottesdienste der
               Neuapostolischen Kirche Süddeutschland.
             </p>
             <p>
@@ -23,7 +23,7 @@
             </p>
             <b-button
               variant="primary"
-              to="/hilfe"
+              to="/anfrage"
             >
               Anfrage stellen &hellip;
             </b-button>
@@ -43,10 +43,11 @@
           <p>
             Voraussetzung ist der Zugang zum Content Management System,
             das für alle Gemeinden und Kirchenbezirke in Süddeutschland
-            zur Verfügung steht. Weiteres folgt in der
+            zur Verfügung steht. <br>
+            Weiteres in der
             <router-link
-              to="/hilfe"
-              v-text="'Dokumentation'"
+              to="/anfrage"
+              v-text="'Anfrage'"
             />.
           </p>
         </b-col>

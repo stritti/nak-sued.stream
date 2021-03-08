@@ -11,14 +11,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/hilfe',
-    name: 'Documentation',
-    component: () => import(/* webpackChunkName: "help" */ '../views/Documentation.vue')
+    path: '/anfrage',
+    name: 'Request',
+    component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue')
   },
   {
     path: '/requested',
     name: 'Requested',
-    component: () => import(/* webpackChunkName: "doc" */ '../views/Requested.vue')
+    component: () => import(/* webpackChunkName: "request" */ '../views/Requested.vue')
   },
   {
     path: '/kontakt',
