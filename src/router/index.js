@@ -18,12 +18,17 @@ const routes = [
   {
     path: '/requested',
     name: 'Requested',
-    component: () => import(/* webpackChunkName: "doc" */ '../views/Requested.vue')
+    component: () => import(/* webpackChunkName: "help" */ '../views/Requested.vue')
   },
   {
     path: '/kontakt',
     name: 'Contact',
     component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+  },
+  {
+    path: '/faq',
+    name: 'FAQ',
+    component: () => import(/* webpackChunkName: "faq" */ '../views/FAQ.vue')
   },
   {
     path: '/impessum',

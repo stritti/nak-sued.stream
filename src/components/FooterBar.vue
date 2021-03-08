@@ -24,6 +24,12 @@
             >
               Hilfe
             </router-link>
+            <router-link
+              to="/faq"
+              class="nav-link"
+            >
+              Fragen &amp; Antworten
+            </router-link>
           </b-col>
           <b-col>
             <router-link
