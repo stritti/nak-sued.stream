@@ -19,10 +19,10 @@
               Über NAK-Sued.stream
             </router-link>
             <router-link
-              to="/hilfe"
+              to="/anfrage"
               class="nav-link"
             >
-              Hilfe
+              Anfrage stellen
             </router-link>
           </b-col>
           <b-col>
