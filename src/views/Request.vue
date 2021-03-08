@@ -260,7 +260,7 @@ export default {
   data () {
     return {
       requestData: {
-        Feed: 'https://www.nak-tuttlingen.de/api/tree/38/A86DCC6A-7E88-11EB-9566-BA2F0201BD0E/export'
+        // Feed: 'https://www.nak-tuttlingen.de/api/tree/38/A86DCC6A-7E88-11EB-9566-BA2F0201BD0E/export'
       },
       testingFeed: null,
       testingUrlField: 'organizer'
