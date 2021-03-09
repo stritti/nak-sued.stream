@@ -99,19 +99,7 @@ export default {
         .then(result => {
           this.isPinRequired = result
           if (!this.isPinRequired) {
-            congregationService.getNoPin(slug)
-              .then(result => {
-                if (result) {
-                  this.congregation = result
-                }
-              })
-              .catch(ex => {
-                console.error('error', ex)
-                this.$router.push('/')
-              })
-              .finally(() => {
-                this.isLoading = false
-              })
+            this.loadCongregationNoPin(slug)
           }
         })
         .catch(ex => {
@@ -122,6 +110,22 @@ export default {
     loadCongregation (slug, pin) {
       this.isLoading = true
       congregationService.get(slug, pin)
+        .then(result => {
+          if (result) {
+            this.congregation = result
+          }
+        })
+        .catch(ex => {
+          console.error('error', ex)
+          this.$router.push('/')
+        })
+        .finally(() => {
+          this.isLoading = false
+        })
+    },
+    loadCongregationNoPin (slug) {
+      this.isLoading = true
+      congregationService.getWithoutPin(slug)
         .then(result => {
           if (result) {
             this.congregation = result
