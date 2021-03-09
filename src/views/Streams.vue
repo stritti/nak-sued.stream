@@ -45,7 +45,7 @@
         </b-col>
       </b-row>
     </template>
-    <template v-else>
+    <template v-else-if="isPinRequired">
       <b-card
         v-if="!isLoading"
         title="Pin-Code"
@@ -83,12 +83,41 @@ export default {
   data () {
     return {
       congregation: null,
-      isLoading: false
+      isLoading: false,
+      isPinRequired: null
     }
+  },
+  mounted () {
+    this.loadIsPinRequired(this.$route.params.url)
   },
   methods: {
     onPinComplete (pin) {
       this.loadCongregation(this.$route.params.url, pin)
+    },
+    loadIsPinRequired (slug) {
+      congregationService.isPinRequired(slug)
+        .then(result => {
+          this.isPinRequired = result
+          if (!this.isPinRequired) {
+            congregationService.getNoPin(slug)
+              .then(result => {
+                if (result) {
+                  this.congregation = result
+                }
+              })
+              .catch(ex => {
+                console.error('error', ex)
+                this.$router.push('/')
+              })
+              .finally(() => {
+                this.isLoading = false
+              })
+          }
+        })
+        .catch(ex => {
+          console.error('error', ex)
+          this.$router.push('/')
+        })
     },
     loadCongregation (slug, pin) {
       this.isLoading = true
