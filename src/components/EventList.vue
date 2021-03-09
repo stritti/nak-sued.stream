@@ -1,12 +1,15 @@
 <template>
   <div>
-    <template v-if="eventList">
+    <template v-if="hasEvents">
       <event-item
         v-for="event in eventList"
         :key="event.id"
         :event="event"
         class="my-3"
       />
+    </template>
+    <template v-else>
+      <b-alert>Keine aktuellen Livestreams vorhanden.</b-alert>
     </template>
     <div
       v-if="isLoading"
@@ -25,8 +28,9 @@
 <script>
 import buuiltCalendar from '@/services/buuiltCalendar.service'
 import EventItem from './EventItem.vue'
+
 export default {
-  name: 'SupporterList',
+  name: 'EventList',
   components: { EventItem },
   props: {
     feedUrl: {
@@ -45,6 +49,11 @@ export default {
       error: null
     }
   },
+  computed: {
+    hasEvents () {
+      return ((this.eventList !== null) && (this.eventList.length > 0))
+    }
+  },
   watch: {
     feedUrl (newVal, oldVal) { // watch it
       console.log('Prop changed: ', newVal, ' | was: ', oldVal)
@@ -59,8 +68,8 @@ export default {
       this.eventList = []
       buuiltCalendar.getList(this.feedUrl, this.urlField)
         .then(result => {
-          console.log(result)
           this.eventList = result
+          this.redirectTodayEvent()
           this.error = false
         })
         .catch(ex => {
@@ -69,6 +78,23 @@ export default {
         .finally(() => {
           this.isLoading = false
         })
+    },
+    redirectTodayEvent () {
+      const OFFSET_HOURS_START = -1
+      const OFFSET_HOURS_END = 2
+      if (this.hasEvents) {
+        const event = this.eventList[0]
+        const today = new Date()
+        const start = new Date(today)
+        start.setHours(start.getHours() + OFFSET_HOURS_START)
+
+        const end = new Date(today)
+        end.setHours(end.getHours() + OFFSET_HOURS_END)
+
+        if (start <= event.start && event.start <= end) {
+          window.location.href = event.url
+        }
+      }
     }
   }
 }
