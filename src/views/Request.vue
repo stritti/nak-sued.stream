@@ -90,12 +90,13 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
       </p>
       <b-form @submit.prevent="testFeed">
         <b-form-group
-          label="Feed-URL"
+          label="Export Link-Adresse"
         >
           <b-input-group>
             <b-form-input
               v-model="requestData.Feed"
-              placeholder="Feed-URL"
+              placeholder="Export Link"
+              description="Der Export-Link aus dem CMS"
               type="url"
               required
             />
