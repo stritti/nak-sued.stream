@@ -1,17 +1,25 @@
 import buuiltCalendar from '@/services/buuiltCalendar.service';
 <template>
-  <div class="documentation">
-    <h1>Dokumentation</h1>
+  <div class="request">
+    <h1>Anfrage stellen</h1>
+    <b-alert show>
+      <b-icon-info-circle
+        class="h2 mr-1"
+      />
+      Dieser Service ist für die Gemeinden und Kirchenbezirke der Neuapostolischen Kirche kostenlos.
+    </b-alert>
+    <p>
+      Hier kann eine Anfrage auf Aufnahme gestellt werden.
+    </p>
     <section>
       <h3>Voraussetzungen</h3>
       <p>
-        Dieser Service ist für die Gemeinden und Kirchenbezirke kostenlos.
-      </p>
-      <p>
-        Folgende Voraussetzungen müssen derzeit erfüllt sein, damit die
+        Folgende Voraussetzungen müssen erfüllt sein, damit die
         Livestreams über diese Seite angeboten werden können.<br>
         Für Erweitungen oder Anpassungen, bitte mit dem
-        <router-link to="/kontakt">
+        <router-link
+          to="/kontakt"
+        >
           Entwicker Kontakt aufnehmen
         </router-link>.
       </p>
@@ -34,8 +42,21 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
           Für die YouTube-Links verwendet das System das meist ungenutzte Feld <em>Veranstalter</em>:
           Hier den Link zu dem jeweils geplanten Live-Stream eintragen. Auf der Übersicht werden
           nur Termine mit einem Link erscheinen.
+          <b-img
+            src="@/assets/hilfe/termin-eintrag.png"
+            width="320"
+            class="m-3"
+            alt="Termin Eintrag mit Link"
+          />
         </li>
         <li>
+          <b-img
+            src="@/assets/hilfe/config-export.png"
+            width="420"
+            class="m-3"
+            right
+            alt="Einstellungen für den Export"
+          />
           Für den Kalender einen <strong>Export</strong> anlegen. Dabei müssen folgende Parameter gewählt werden:
           <ul>
             <li>Name: am besten mit dem Gemeindenamen, z.B. <em>Termine - Gemeinde Stockach</em></li>
@@ -43,10 +64,18 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
             <li>Zeitzone: <em>Europa/Berlin</em></li>
             <li>Status: <em>Nur freigeschaltete</em></li>
           </ul>
-          Wird dieser Export gespeichert, so erhält man in der Übersichtsliste die Möglichkeit
-          den Abruf-Link in der Spalte <em>Interner Link</em> aufzurufen. Im Browser müsste sich
-          ein unformatierter Text mit vielen geschweiften Klammern ("{" und "}") öffnen.<br>
-          Diesen Link bitte für die Beantragung im Folgenden speichern!
+          <p>
+            Wird dieser Export gespeichert, so erhält man in der Übersichtsliste die Möglichkeit
+            den Abruf-Link in der Spalte <em>Interner Link</em> aufzurufen. Im Browser müsste sich
+            ein unformatierter Text mit vielen geschweiften Klammern ("{" und "}") öffnen.<br>
+            Diesen Link bitte für die Beantragung im Folgenden speichern!
+          </p>
+          <b-img
+            src="@/assets/hilfe/export-link.png"
+            class="m-3"
+            fluid
+            alt="Einstellungen für den Export"
+          />
         </li>
       </ol>
     </section>
@@ -104,6 +133,21 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
                   placeholder="Gemeinde XYZ"
                   required
                 />
+              </b-form-group>
+              <b-form-group
+                label="gewünschter Link"
+                description="Gewünschter Link für den Stream. Muss eindeutig sein und wird deshalb ggfs. angepasst."
+              >
+                <b-input-group
+                  prepend="https://www.nak-sued.stream/"
+                >
+                  <b-form-input
+                    v-model="requestData.slug"
+                    placeholder="gemeinde"
+                    :formatter="slugFormatter"
+                    required
+                  />
+                </b-input-group>
               </b-form-group>
               <b-form-group
                 label="Zugangs-Pin"
@@ -208,7 +252,7 @@ import EventList from '../components/EventList.vue'
 import congregationService from '@/services/congregation.service'
 
 export default {
-  name: 'Documentation',
+  name: 'Request',
   components: { EventList },
   metaInfo: {
     title: 'Dokumentation'
@@ -236,8 +280,14 @@ export default {
           this.$router.push({ name: 'Requested' })
         })
     },
-    pinFormatter (e) {
-      return String(e).substring(0, 5)
+    pinFormatter (value) {
+      return String(value).substring(0, 5)
+    },
+    slugFormatter (value) {
+      value = value.toLowerCase()
+      value = value.replace(/([^a-z0-9]+)/gi, '-')
+      value = value.startsWith('-') ? value.slice(1, value.length) : value
+      return value
     },
     randomIntFromInterval (min, max) { // min and max included
       return Math.floor(Math.random() * (max - min + 1) + min)
