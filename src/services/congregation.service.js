@@ -26,7 +26,7 @@ const congregationService = {
 
     return resultList[0]
   },
-  async getNoPin (slug) {
+  async getWithoutPin (slug) {
     const filter = encodeURIComponent(`AND({slug} = "${slug}", {pinDisabled} = TRUE())`)
     const response = await airtableBase.get(`${BASE}?view=${ACTIVE_VIEW}&filterByFormula=${filter}&maxRecords=1`)
     const resultList = response.data.records.map((item) => {
