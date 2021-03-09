@@ -7,7 +7,14 @@
       :key="faq.id"
       class="my-3"
     >
-      <h4>{{ faq.Frage }}</h4>
+      <h5>
+        <a
+          :name="faq.id"
+          :href="'#'+faq.id"
+          class="text-muted secondary "
+        >#</a>
+        {{ faq.Frage }}
+      </h5>
       <vue-simple-markdown :source="faq.Antwort.replaceAll('\\', '')" />
     </section>
     <div
