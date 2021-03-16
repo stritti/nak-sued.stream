@@ -12,7 +12,7 @@
       <h1>Livestreams</h1>
       <h2 v-text="congregation.Name" />
       <p>
-        Folgende Livestreams sind geplant:
+        Folgende Livestreams sind aktuell geplant:
       </p>
       <b-row>
         <b-col
@@ -25,8 +25,9 @@
             :url-field="congregation.Field"
           />
           <p>
-            Bitte beachten Sie, dass bei dem Besuch des Livestreams
-            Ihre personenbezogenen Daten von YouTube verarbeitet werden.
+            Bitte beachten Sie, dass bei dem Besuch der Livestreams
+            Ihre personenbezogenen Daten vom der Streamingplattform (z.B. YouTube)
+            verarbeitet werden.
           </p>
         </b-col>
         <b-col

@@ -38,17 +38,22 @@
           <p>
             Plattformen, wie YouTube, legen für jedes Livestream-Event
             umständliche Links an, die man sich nicht merken kann.
-            Dieser Service soll den Gemeinden helfen dies zu vereinfachen.
+            Dieser Service soll den Gemeinden helfen über einen eindeutigen
+            Link die Livestreams Pin-geschützt anbieten zu können.
           </p>
           <p>
             Voraussetzung ist der Zugang zum Content Management System,
             das für alle Gemeinden und Kirchenbezirke in Süddeutschland
             zur Verfügung steht. <br>
-            Weiteres in der
+            Weitere Details in der Hilfe zur
             <router-link
               to="/anfrage"
               v-text="'Anfrage'"
             />.
+          </p>
+          <p>
+            Der ienst ist für die Gemeinden und Kirchenbezirke der
+            Neuapostolischen Kirche Süddeutschland gratis.
           </p>
         </b-col>
         <b-col>
@@ -61,6 +66,20 @@
               &dash; Markus 16,15
             </p>
           </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          <h2>Livestream-Angebot der Gebietskirche Süddeutschland</h2>
+          <p>
+            Die Gebietskirche Süddeutschland der Neuapostolischen Kirche
+            hat einen öffentlichen
+            <a
+              href="https://www.youtube.com/c/NAKSueddeutschland"
+              target="_blank"
+            >YouTube-Kanal</a> auf welchem auch immer wieder
+            Gottesdienste live übertragen werden.
+          </p>
         </b-col>
       </b-row>
     </section>
