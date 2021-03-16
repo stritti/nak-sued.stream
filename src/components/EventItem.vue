@@ -20,10 +20,10 @@
           class="d-inline-block align-top"
           src="@/assets/logo.png"
           height="20"
-        /> {{ event.url }}
+        />&nbsp;{{ event.url }}
       </a>
     </b-card-text>
-    <b-card-text v-text="event.description" />
+    <vue-simple-markdown :source="event.description" />
   </b-card>
 </template>
 
@@ -58,9 +58,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.event {
-  min-width: 340px;
-}
-</style>
