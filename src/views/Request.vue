@@ -117,7 +117,7 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
             <h4>Antrag</h4>
             <b-form @submit.prevent="submitRequest">
               <b-form-group
-                label="Feed-URL"
+                label="Export Link-Adresse"
               >
                 <b-form-input
                   v-model="requestData.Feed"
@@ -133,6 +133,16 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
                   v-model="requestData.Name"
                   placeholder="Gemeinde XYZ"
                   required
+                />
+              </b-form-group>
+              <b-form-group
+                label="Webseite"
+                description="Link-Adresse zur Seite der Gemeinde/des Bezirks"
+              >
+                <b-form-input
+                  v-model="requestData.Website"
+                  placeholder="http://www.nak-gemeinde.de"
+                  type="url"
                 />
               </b-form-group>
               <b-form-group
