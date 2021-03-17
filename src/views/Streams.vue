@@ -63,6 +63,7 @@
         <b-card-text class="text-muted">
           Bitte Pin-Code eingeben.
         </b-card-text>
+        <hr>
         <b-card-text class="text-muted">
           Die Zugangsdaten können in der Gemeinde erfragt werden.
         </b-card-text>
