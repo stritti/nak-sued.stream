@@ -50,7 +50,7 @@
       <b-card
         v-if="!isLoading"
         title="Pin-Code"
-        style="max-width: 20rem;"
+        style="max-width: 350px;"
         class="mx-auto my-5 align-items-center"
       >
         <b-card-text>
@@ -62,6 +62,12 @@
         </b-card-text>
         <b-card-text class="text-muted">
           Bitte Pin-Code eingeben.
+        </b-card-text>
+        <b-card-text class="text-muted">
+          Die Zugangsdaten können in der Gemeinde erfragt werden.
+        </b-card-text>
+        <b-card-text class="text-muted">
+          Wir freuen uns über alle Zuschauer:innen
         </b-card-text>
       </b-card>
     </template>
