@@ -7,7 +7,7 @@
       <span>Graf-Mangold-Str. 18</span><br>
       <span>78333 Stockach</span><br>
       <strong>Kontakt</strong><br>
-      <span>E-Mail:&nbsp;nak.tuttlingen@gmail.com</span>
+      <span>E-Mail:&nbsp;info(at)nak-sued(Punkt)stream</span>
     </p>
 
     <h2>Haftungsausschluss (Disclaimer)</h2>
