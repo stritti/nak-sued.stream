@@ -16,11 +16,11 @@ import buuiltCalendar from '@/services/buuiltCalendar.service';
       <p>
         Folgende Voraussetzungen müssen erfüllt sein, damit die
         Livestreams über diese Seite angeboten werden können.<br>
-        Für Erweitungen oder Anpassungen, bitte mit dem
+        Für Erweitungen oder Anpassungen, die über die folgenden Anforderungen hinaus gehen, bitte mit dem
         <router-link
           to="/kontakt"
         >
-          Entwicker Kontakt aufnehmen
+          Entwickler Kontakt aufnehmen
         </router-link>.
       </p>
       <ol>
