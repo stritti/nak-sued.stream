@@ -39,7 +39,6 @@ const buuiltCalendarService = {
     })
 
     if (filter) {
-      console.log('Filter', filter)
       resultList = resultList.filter((item) => {
         return (item.tags.indexOf(filter) > -1)
       })
