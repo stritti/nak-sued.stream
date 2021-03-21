@@ -40,6 +40,11 @@ export default {
     urlField: {
       type: String,
       required: true
+    },
+    filter: {
+      type: String,
+      required: false,
+      default: null
     }
   },
   data () {
@@ -66,7 +71,7 @@ export default {
   methods: {
     loadCalendar () {
       this.eventList = []
-      buuiltCalendar.getList(this.feedUrl, this.urlField)
+      buuiltCalendar.getList(this.feedUrl, this.urlField, this.filter)
         .then(result => {
           this.eventList = result
           this.redirectTodayEvent()

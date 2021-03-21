@@ -12,7 +12,6 @@
     <p>
       Hier kann die Anfrage zur Aufnahme gestellt werden.
     </p>
-
     <requirements />
 
     <preparation />

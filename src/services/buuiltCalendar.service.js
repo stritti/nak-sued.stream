@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const buuiltCalendarService = {
-  async getList (feed, urlField) {
+  async getList (feed, urlField, filter) {
     const response = await axios.get(feed)
     let resultList = response.data.items.map((item) => {
       return {
@@ -37,6 +37,12 @@ const buuiltCalendarService = {
         return item.start >= yesterday
       }
     })
+
+    if (filter) {
+      resultList = resultList.filter((item) => {
+        return (item.tags.indexOf(filter) > -1)
+      })
+    }
 
     // sort ascending by start date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())

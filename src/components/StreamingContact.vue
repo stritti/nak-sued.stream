@@ -19,6 +19,12 @@ import congregationService from '@/services/congregation.service';
           <b-icon-envelope-fill class="mr-2" />{{ congregation.Mail }}</a>
       </span>
     </p>
+    <p>
+      <span v-if="congregation.Website">
+        <a :href="congregation.Website">
+          <b-icon-globe2 class="mr-2" />{{ congregation.Website }}</a>
+      </span>
+    </p>
   </div>
 </template>
 

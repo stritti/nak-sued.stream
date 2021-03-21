@@ -23,6 +23,7 @@
             v-if="congregation"
             :feed-url="congregation.Feed"
             :url-field="congregation.Field"
+            :filter="congregation.Filter"
           />
           <p>
             Bitte beachten Sie, dass bei dem Besuch der Livestreams
