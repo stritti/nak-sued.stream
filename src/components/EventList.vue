@@ -62,8 +62,6 @@ export default {
   },
   computed: {
     hasEvents () {
-      console.log(this.eventList)
-      console.log((this.eventList !== null) && (this.eventList.length > 0))
       return ((this.eventList !== null) && (this.eventList.length > 0))
     }
   },
