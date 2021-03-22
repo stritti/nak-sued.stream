@@ -9,8 +9,14 @@
       />
     </template>
     <template v-else>
-      <b-alert>Keine aktuellen Livestreams vorhanden.</b-alert>
+      <b-alert
+        show
+        class="my-5"
+      >
+        Aktuell sind keine Livestreams geplant.
+      </b-alert>
     </template>
+
     <div
       v-if="isLoading"
       style="max-width: 20rem;"
@@ -56,6 +62,8 @@ export default {
   },
   computed: {
     hasEvents () {
+      console.log(this.eventList)
+      console.log((this.eventList !== null) && (this.eventList.length > 0))
       return ((this.eventList !== null) && (this.eventList.length > 0))
     }
   },
