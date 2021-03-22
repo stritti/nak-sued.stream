@@ -66,8 +66,7 @@ export default {
     }
   },
   watch: {
-    feedUrl (newVal, oldVal) { // watch it
-      console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+    feedUrl (newVal, oldVal) {
       this.loadCalendar()
     }
   },
