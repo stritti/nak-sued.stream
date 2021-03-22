@@ -89,7 +89,7 @@ export default {
       requestData: {
         // Feed: 'https://www.nak-tuttlingen.de/api/tree/38/A86DCC6A-7E88-11EB-9566-BA2F0201BD0E/export'
       },
-      // testingFeed: null,
+      // TODO testingFeed: null,
       testingFeed: 'https://www.nak-tuttlingen.de/api/tree/38/A86DCC6A-7E88-11EB-9566-BA2F0201BD0E/export',
       testingUrlField: 'organizer'
     }
