@@ -18,7 +18,7 @@
       ></a>
     </p>
     <p>
-      Für die Angaben in den Übersichten der Livestream, übernehmen die angegebenen
+      Für die Angaben in den Übersichten der Livestreams, übernehmen die angegebenen
       Ansprechpartner:innen die Verantwortung.
     </p>
   </div>
