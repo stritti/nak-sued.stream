@@ -11,6 +11,7 @@
           v-model="contact.Name"
           type="text"
           placeholder="Name"
+          autocomplete="name"
           required
         />
       </b-form-group>
@@ -22,6 +23,7 @@
           v-model="contact.Email"
           type="email"
           placeholder="E-Mail"
+          autocomplete="email"
           required
         />
       </b-form-group>
