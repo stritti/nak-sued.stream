@@ -52,7 +52,8 @@ const buuiltCalendarService = {
     // sort ascending by starting date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
 
-    return resultList
+    // reduce to next x events
+    return resultList.slice(0, 8)
   }
 }
 
