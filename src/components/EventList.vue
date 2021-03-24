@@ -9,8 +9,14 @@
       />
     </template>
     <template v-else>
-      <b-alert>Keine aktuellen Livestreams vorhanden.</b-alert>
+      <b-alert
+        show
+        class="my-5"
+      >
+        Aktuell sind keine Livestreams geplant.
+      </b-alert>
     </template>
+
     <div
       v-if="isLoading"
       style="max-width: 20rem;"
@@ -60,8 +66,7 @@ export default {
     }
   },
   watch: {
-    feedUrl (newVal, oldVal) { // watch it
-      console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+    feedUrl (newVal, oldVal) {
       this.loadCalendar()
     }
   },

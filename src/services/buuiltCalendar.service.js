@@ -24,30 +24,36 @@ const buuiltCalendarService = {
     })
 
     resultList = resultList.filter((item) => {
+      // only published events
       if (item.state !== 'latest') return false
+      // ony events with url
       if (item.url === null || item.url === '') return false
 
+      // only events in future
       const today = new Date()
-      const yesterday = new Date(today)
-      yesterday.setDate(yesterday.getDate() - 1)
+      today.setHours(0)
+      today.setMinutes(0)
+      today.setSeconds(0)
 
       if (item.end) {
-        return item.end >= yesterday
+        return item.end >= today
       } else {
-        return item.start >= yesterday
+        return item.start >= today
       }
     })
 
+    // filter for tags if defined
     if (filter) {
       resultList = resultList.filter((item) => {
         return (item.tags.indexOf(filter) > -1)
       })
     }
 
-    // sort ascending by start date
+    // sort ascending by starting date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
 
-    return resultList
+    // reduce to next x events
+    return resultList.slice(0, 8)
   }
 }
 
