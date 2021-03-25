@@ -58,6 +58,7 @@
           <code-input
             class="input"
             :fields="5"
+            auto-focus
             @complete="onPinComplete"
           />
         </b-card-text>
