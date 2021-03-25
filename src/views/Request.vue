@@ -12,10 +12,17 @@
     <p>
       Hier kann die Anfrage zur Aufnahme gestellt werden.
     </p>
+    <h2>Inhalt</h2>
+    <ol>
+      <li><a href="#requirements">Voraussetzungen</a></li>
+      <li><a href="#preparation">Vorbereitung</a></li>
+      <li><a href="#request">Testen und Aufnahme beantragen</a></li>
+    </ol>
+    <hr>
     <requirements />
-
+    <hr>
     <preparation />
-
+    <hr>
     <request-form />
   </div>
 </template>

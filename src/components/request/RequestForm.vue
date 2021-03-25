@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Testen und Aufnahme beantragen</h2>
+    <h2><a name="request" />Testen und Aufnahme beantragen</h2>
     <p>
       Hier kann zum Testen der Link vom Kalender-Export eingegeben werden.
       Ist er korrekt, so sollte eine Vorschau des Kalenders rechts angezeigt werden.
@@ -11,6 +11,7 @@
     <b-form @submit.prevent="testFeed">
       <b-form-group
         label="Export Link-Adresse"
+        class="my-5"
       >
         <b-input-group>
           <b-form-input
