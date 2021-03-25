@@ -3,10 +3,10 @@
     <h2><a name="request" />Testen und Aufnahme beantragen</h2>
     <p>
       Hier kann zum Testen der Link vom Kalender-Export eingegeben werden.
-      Ist er korrekt, so sollte eine Vorschau des Kalenders rechts angezeigt werden.
+      Ist er korrekt, so sollte eine Vorschau des Kalenders angezeigt werden.
     </p>
     <p>
-      Danach sind noch ein paar Angaben notwendig.
+      Im anschluss sind noch ein paar Angaben zum Beantragen notwendig.
     </p>
     <b-form @submit.prevent="testFeed">
       <b-form-group
