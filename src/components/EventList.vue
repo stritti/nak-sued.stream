@@ -1,22 +1,9 @@
 <template>
   <div>
-    <template v-if="hasEvents">
-      <event-item
-        v-for="event in eventList"
-        :key="event.id"
-        :event="event"
-        class="my-3"
-      />
-    </template>
-    <template v-else>
-      <b-alert
-        show
-        class="my-5"
-      >
-        Aktuell sind keine Livestreams geplant.
-      </b-alert>
-    </template>
-
+    <div
+      v-if="error"
+      v-text="error"
+    />
     <div
       v-if="isLoading"
       style="max-width: 20rem;"
@@ -24,10 +11,24 @@
     >
       <b-spinner /> Lade Daten &hellip;
     </div>
-    <div
-      v-if="error"
-      v-text="error"
-    />
+    <template v-else>
+      <template v-if="hasEvents">
+        <event-item
+          v-for="event in eventList"
+          :key="event.id"
+          :event="event"
+          class="my-3"
+        />
+      </template>
+      <template v-else>
+        <b-alert
+          show
+          class="my-5"
+        >
+          Aktuell sind keine Livestreams geplant.
+        </b-alert>
+      </template>
+    </template>
   </div>
 </template>
 
@@ -56,13 +57,13 @@ export default {
   data () {
     return {
       eventList: null,
-      isLoading: true,
+      isLoading: null,
       error: null
     }
   },
   computed: {
     hasEvents () {
-      return ((this.eventList !== null) && (this.eventList.length > 0))
+      return (!this.isLoading && (this.eventList !== null) && (this.eventList.length > 0))
     }
   },
   watch: {
@@ -75,6 +76,7 @@ export default {
   },
   methods: {
     loadCalendar () {
+      this.isLoading = true
       this.eventList = []
       buuiltCalendar.getList(this.feedUrl, this.urlField, this.filter)
         .then(result => {
