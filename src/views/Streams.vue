@@ -12,7 +12,7 @@
       <h1>Livestreams</h1>
       <h2 v-text="congregation.Name" />
       <p>
-        Folgende Livestreams sind geplant:
+        Folgende Livestreams sind aktuell geplant:
       </p>
       <b-row>
         <b-col
@@ -25,9 +25,10 @@
             :url-field="congregation.Field"
             :filter="congregation.Filter"
           />
-          <p>
-            Bitte beachten Sie, dass bei dem Besuch des Livestreams
-            Ihre personenbezogenen Daten von YouTube verarbeitet werden.
+          <p class="my-5">
+            Bitte beachten Sie, dass bei dem Besuch der Livestreams
+            Ihre personenbezogenen Daten von der Streamingplattform (z. B. YouTube)
+            verarbeitet werden.
           </p>
         </b-col>
         <b-col
@@ -36,12 +37,12 @@
         >
           <streaming-notes
             :notes="congregation.Notes"
-            class="mt-3"
+            class="my-3"
           />
 
           <streaming-contact
             :congregation="congregation"
-            class="mt-3"
+            class="my-5"
           />
         </b-col>
       </b-row>
@@ -50,7 +51,7 @@
       <b-card
         v-if="!isLoading"
         title="Pin-Code"
-        style="max-width: 20rem;"
+        style="max-width: 350px;"
         class="mx-auto my-5 align-items-center"
       >
         <b-card-text>
@@ -62,6 +63,13 @@
         </b-card-text>
         <b-card-text class="text-muted">
           Bitte Pin-Code eingeben.
+        </b-card-text>
+        <hr>
+        <b-card-text class="text-muted">
+          Die Zugangsdaten können in der Gemeinde erfragt werden.
+        </b-card-text>
+        <b-card-text class="text-muted">
+          Wir freuen uns über alle Zuschauer:innen
         </b-card-text>
       </b-card>
     </template>

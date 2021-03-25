@@ -36,8 +36,10 @@ body {
 }
 .content {
   flex-grow: 1;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 225px);
   height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .navbar, .content, footer {
   flex-shrink: 0;

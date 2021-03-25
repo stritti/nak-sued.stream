@@ -1,9 +1,12 @@
 <template>
   <footer>
-    <b-container class="navbar-dark">
+    <b-container class="navbar-dark d-print-none">
       <nav class="navbar-nav">
         <b-row>
-          <b-col>
+          <b-col
+            sm="12"
+            md="4"
+          >
             <router-link
               to="/"
               class="nav-link"
@@ -11,7 +14,10 @@
               &copy; {{ year }} NAK-Sued.stream
             </router-link>
           </b-col>
-          <b-col>
+          <b-col
+            sm="12"
+            md="4"
+          >
             <router-link
               to="/about"
               class="nav-link"
@@ -31,7 +37,10 @@
               Fragen &amp; Antworten
             </router-link>
           </b-col>
-          <b-col>
+          <b-col
+            sm="12"
+            md="4"
+          >
             <router-link
               to="/kontakt"
               class="nav-link"
@@ -73,9 +82,10 @@ export default {
   @import '@/assets/scss/custom-vars.scss';
   footer {
     color: $light;
-    background-color: $dark;
+    background-color: $primary;
     min-height: 60px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    font-weight: 600;
   }
 </style>

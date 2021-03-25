@@ -34,25 +34,33 @@
     <section>
       <b-row>
         <b-col md="6">
-          <h2>Livestreams für die Gemeinden</h2>
-          <p>
-            Plattformen, wie YouTube, legen für jedes Livestream-Event
-            umständliche Links an, die man sich nicht merken kann.
-            Dieser Service soll den Gemeinden helfen dies zu vereinfachen.
-          </p>
-          <p>
-            Voraussetzung ist der Zugang zum Content Management System,
-            das für alle Gemeinden und Kirchenbezirke in Süddeutschland
-            zur Verfügung steht. <br>
-            Weiteres in der
-            <router-link
-              to="/anfrage"
-              v-text="'Anfrage'"
-            />.
-          </p>
+          <section>
+            <h2>Livestreams für die Gemeinden</h2>
+            <p>
+              Plattformen, wie YouTube, legen für jedes Livestream-Event
+              umständliche Links an, die man sich nicht merken kann.
+              Dieser Service soll den Gemeinden helfen über einen eindeutigen
+              Link die Livestreams Pin-geschützt anbieten zu können.
+            </p>
+            <h3>Voraussetzungen</h3>
+            <p>
+              Voraussetzung ist der Zugang zum Content Management System,
+              das für alle Gemeinden und Kirchenbezirke in Süddeutschland
+              zur Verfügung steht. <br>
+              Weitere Details in der Hilfe zur
+              <router-link
+                to="/anfrage"
+                v-text="'Anfrage'"
+              />.
+            </p>
+            <p>
+              Der Dienst ist für die Gemeinden und Kirchenbezirke der
+              Neuapostolischen Kirche Süddeutschland gratis.
+            </p>
+          </section>
         </b-col>
         <b-col>
-          <div class="bible-text">
+          <div class="bible-text my-5">
             <p>
               Und er sprach zu ihnen: Gehet hin in alle Welt
               und predigt das Evangelium aller Kreatur.
@@ -61,6 +69,29 @@
               &dash; Markus 16,15
             </p>
           </div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
+          <section>
+            <h2>Livestream-Angebot der Gebietskirche Süddeutschland</h2>
+            <p>
+              Die
+              <a
+                href="https://www.nak-sued.de"
+                target="_blank"
+              >
+                Gebietskirche Süddeutschland
+              </a>
+              der Neuapostolischen Kirche
+              hat einen öffentlichen
+              <a
+                href="https://www.youtube.com/c/NAKSueddeutschland"
+                target="_blank"
+              >YouTube-Kanal</a> auf welchem auch immer wieder
+              Gottesdienste live übertragen werden.
+            </p>
+          </section>
         </b-col>
       </b-row>
     </section>
@@ -82,6 +113,7 @@ export default {
 
 .bible-text {
   text-decoration:none;
+  font-size: 1.2rem;
   color:#000;
   background:#ffc;
   display:block;
@@ -91,5 +123,8 @@ export default {
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
   transition: transform .15s linear;
   transform: rotate(-5deg);
+  border-color: rgba(128, 127, 127, .5);
+  border-width: 1px;
+  border-style: solid;
 }
 </style>

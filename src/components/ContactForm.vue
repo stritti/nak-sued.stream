@@ -10,7 +10,7 @@
         <b-form-input
           v-model="contact.Name"
           type="text"
-          placeholder="Name"
+          placeholder="Vorname Nachname"
           autocomplete="name"
           required
         />
