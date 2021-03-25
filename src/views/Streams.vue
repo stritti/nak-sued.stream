@@ -25,9 +25,9 @@
             :url-field="congregation.Field"
             :filter="congregation.Filter"
           />
-          <p>
+          <p class="my-5">
             Bitte beachten Sie, dass bei dem Besuch der Livestreams
-            Ihre personenbezogenen Daten vom der Streamingplattform (z.B. YouTube)
+            Ihre personenbezogenen Daten von der Streamingplattform (z. B. YouTube)
             verarbeitet werden.
           </p>
         </b-col>
@@ -37,12 +37,12 @@
         >
           <streaming-notes
             :notes="congregation.Notes"
-            class="mt-3"
+            class="my-3"
           />
 
           <streaming-contact
             :congregation="congregation"
-            class="mt-3"
+            class="my-5"
           />
         </b-col>
       </b-row>
