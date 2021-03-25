@@ -113,7 +113,7 @@ export default {
           }
         })
         .catch(ex => {
-          console.error('error', ex)
+          console.error(ex)
           this.$router.push('/')
         })
     },
@@ -126,7 +126,7 @@ export default {
           }
         })
         .catch(ex => {
-          console.error('error', ex)
+          console.error(ex)
           this.$router.push('/')
         })
         .finally(() => {
