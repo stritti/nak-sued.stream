@@ -94,7 +94,7 @@ export default {
     redirectTodayEvent () {
       const OFFSET_HOURS_START = -1
       const OFFSET_HOURS_END = 2
-      if (this.hasEvents) {
+      if (this.eventList && this.eventList.length > 0) {
         const event = this.eventList[0]
         const today = new Date()
         const start = new Date(today)
