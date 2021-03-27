@@ -6,7 +6,7 @@
       Ist er korrekt, so sollte eine Vorschau des Kalenders angezeigt werden.
     </p>
     <p>
-      Im anschluss sind noch ein paar Angaben zum Beantragen notwendig.
+      Im Anschluss sind noch ein paar Angaben zum Beantragen notwendig.
     </p>
     <b-form @submit.prevent="testFeed">
       <b-form-group
