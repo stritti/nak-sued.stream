@@ -15,7 +15,7 @@
           :link-gen="linkGen"
           :page-gen="pageGen"
           base-url="#"
-          limit="8"
+          limit="20"
           :number-of-pages="register.length"
         />
       </div>
