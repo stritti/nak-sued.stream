@@ -16,6 +16,8 @@
           :page-gen="pageGen"
           base-url="#"
           limit="20"
+          hide-goto-end-buttons
+          pills
           :number-of-pages="register.length"
         />
       </div>
@@ -51,16 +53,17 @@ export default {
   name: 'Stream',
   components: { StreamItem },
   metaInfo: {
-    title: 'Verzeichnis der Streams'
+    title: 'Verzeichnis'
   },
   data () {
     return {
-      isLoading: true,
+      isLoading: null,
       streamList: [],
       register: []
     }
   },
   mounted () {
+    this.isLoading = true
     congregationService.getList()
       .then((result) => {
         this.streamList = []
