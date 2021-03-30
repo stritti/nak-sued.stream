@@ -7,10 +7,10 @@
       <strong v-if="event.start">
         {{ startDate }} Uhr
       </strong>
+      <strong v-if="event.location">
+        aus {{ event.location }}
+      </strong>
     </b-card-text>
-    <!-- b-card-text v-if="videoId">
-      <youtube :video-id="videoId" />
-    </!-->
     <b-card-text>
       <a
         v-if="event.url"
@@ -29,6 +29,17 @@
 
 <script>
 import { getIdFromURL } from 'vue-youtube-embed'
+
+const DATE_FORMAT = {
+  weekday: 'short',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: false
+}
+
 export default {
   name: 'EventItem',
   props: {
@@ -40,15 +51,13 @@ export default {
   computed: {
     startDate () {
       if (this.event.start) {
-        const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false }
-        return this.event.start.toLocaleString('de-DE', options)
+        return this.event.start.toLocaleString('de-DE', DATE_FORMAT)
       }
       return ''
     },
     endDate () {
       if (this.event.end) {
-        const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false }
-        return this.event.end.toLocaleString('de-DE', options)
+        return this.event.end.toLocaleString('de-DE', DATE_FORMAT)
       }
       return ''
     },
