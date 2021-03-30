@@ -23,7 +23,8 @@ const routes = [
   {
     path: '/verzeichnis',
     name: 'Directory',
-    component: () => import(/* webpackChunkName: "directory" */ '../views/Directory.vue')
+    component: () => import(/* webpackChunkName: "directory" */ '../views/Directory.vue'),
+    props: true
   },
   {
     path: '/kontakt',

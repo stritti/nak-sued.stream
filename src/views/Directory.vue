@@ -1,5 +1,15 @@
 <template>
   <div class="directory">
+    <b-alert
+      v-if="notFound"
+      show
+      variant="warning"
+      class="my-5"
+    >
+      <b-icon icon="link45deg" />
+      Der angegebene Link konnte nicht gefunden werden.
+      Folgende Streams sind registriert:
+    </b-alert>
     <h1>Verzeichnis</h1>
     <template v-if="isLoading">
       <div
@@ -18,28 +28,28 @@
           limit="20"
           hide-goto-end-buttons
           pills
-          :number-of-pages="register.length"
+          :number-of-pages="pageLength"
         />
       </div>
       <div class="directory-list">
-        <div
+        <template
           v-for="stream in streamList"
-          :key="stream.id"
-          class="item"
         >
-          <span v-if="stream.index">
+          <h4
+            v-if="stream.index"
+            :key="stream.id"
+            class="mt-3"
+          >
             <a :name="stream.label" />
-            <h4
-              class="mt-3"
-              v-text="stream.label"
-            />
-          </span>
+            {{ stream.label }}
+          </h4>
           <stream-item
             v-else
-            class="stream"
+            :key="stream.id"
+            class="stream-item"
             :stream="stream"
           />
-        </div>
+        </template>
       </div>
     </template>
   </div>
@@ -55,11 +65,26 @@ export default {
   metaInfo: {
     title: 'Verzeichnis'
   },
+  props: {
+    notFound: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
   data () {
     return {
       isLoading: null,
       streamList: [],
       register: []
+    }
+  },
+  computed: {
+    pageLength () {
+      if (this.register && this.register.length > 0) {
+        return this.register.length
+      }
+      return 1
     }
   },
   mounted () {
@@ -69,7 +94,7 @@ export default {
         this.streamList = []
         let index = null
         result.forEach(item => {
-          if (index !== item.Kurzname.charAt(0)) {
+          if (item.Kurzname.charAt(0) && index !== item.Kurzname.charAt(0)) {
             index = item.Kurzname.charAt(0)
             this.register.push(index)
             this.streamList.push({ index: true, label: index })
@@ -92,18 +117,14 @@ export default {
 
 <style lang="scss">
 .directory-list {
-  column-count: 2;
+  column-count: 1;
   column-gap: 10px;
-
-  .item {
-    break-inside: avoid;
-  }
 
   h4 {
     break-before: auto;
     break-after: avoid;
   }
-  .stream {
+  .stream-item {
     break-before: avoid;
   }
 
