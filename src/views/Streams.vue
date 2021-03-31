@@ -113,8 +113,7 @@ export default {
           }
         })
         .catch(ex => {
-          console.error(ex)
-          this.$router.push('/')
+          this.redirectNotFound(slug)
         })
     },
     loadCongregation (slug, pin) {
@@ -126,8 +125,7 @@ export default {
           }
         })
         .catch(ex => {
-          console.error(ex)
-          this.$router.push('/')
+          this.redirectNotFound(slug)
         })
         .finally(() => {
           this.isLoading = false
@@ -142,12 +140,15 @@ export default {
           }
         })
         .catch(ex => {
-          console.error('error', ex)
-          this.$router.push('/')
+          this.redirectNotFound(slug)
         })
         .finally(() => {
           this.isLoading = false
         })
+    },
+    redirectNotFound (slug) {
+      console.error('No stream found for slug ' + slug)
+      this.$router.push({ name: 'Directory', params: { notFound: true } })
     }
   }
 }

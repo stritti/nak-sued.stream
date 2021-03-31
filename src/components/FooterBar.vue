@@ -25,6 +25,12 @@
               Über NAK-Sued.stream
             </router-link>
             <router-link
+              to="/verzeichnis"
+              class="nav-link"
+            >
+              Verzeichnis
+            </router-link>
+            <router-link
               to="/anfrage"
               class="nav-link"
             >
