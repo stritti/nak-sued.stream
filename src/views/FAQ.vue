@@ -5,7 +5,8 @@
     <section
       v-for="faq in faqList"
       :key="faq.id"
-      class="my-3"
+      class="my-4"
+      :class="isSelectedStyle(faq.id)"
     >
       <h5>
         <a
@@ -48,9 +49,30 @@ export default {
         this.faqList = result
         this.isLoading = false
       })
+  },
+  methods: {
+    isSelectedStyle (id) {
+      if (this.$route.hash && (this.$route.hash === `#${id}`)) {
+        return 'faq-selected'
+      } else {
+        return ''
+      }
+    }
   }
 }
 </script>
-<style scoped>
+<style lang="scss">
+@import '@/assets/scss/custom-vars.scss';
 
+.faq-selected {
+  h5 {
+    color: $primary
+  }
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(128, 127, 127, .5);
+  border-radius: 5px;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  padding: 10px;
+}
 </style>
