@@ -8,7 +8,8 @@
       Diese Webseite wurde ehrenamtlich privat erstellt und wird auch privat betrieben.
     </p>
     <p>
-      Falls Sie den Betrieb dieser Webseite unterstützen möchten:
+      Falls Sie den Betrieb dieser Webseite unterstützen möchten, dürfen Sie mir
+      einen Kaffee spendieren:
       <a
         href="https://ko-fi.com/J3J33A8DT"
         target="_blank"
@@ -17,7 +18,7 @@
         style="border:0px;height:36px;"
         src="https://cdn.ko-fi.com/cdn/kofi2.png?v=2"
         border="0"
-        alt="Buy Me a Coffee at ko-fi.com"
+        alt="Kaufe mir einen Kaffee auf ko-fi.com"
       ></a>
     </p>
     <p>
