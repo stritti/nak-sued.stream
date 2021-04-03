@@ -1,5 +1,8 @@
 <template>
-  <div class="about">
+  <div
+    v-once
+    class="about"
+  >
     <h1>Über NAK-Sued.stream</h1>
     <p>
       Diese Webseite wurde ehrenamtlich privat erstellt und wird auch privat betrieben.
@@ -18,7 +21,7 @@
       ></a>
     </p>
     <p>
-      Für die Angaben in den Übersichten der Livestreams, übernehmen die angegebenen
+      Für die Angaben in den Übersichten der Livestreams übernehmen die angegebenen
       Ansprechpartner:innen die Verantwortung.
     </p>
   </div>
@@ -28,7 +31,7 @@
 export default {
   name: 'About',
   metaInfo: {
-    title: 'Über NAK-Süd.stream'
+    title: 'Über NAK-Sued.stream'
   }
 }
 </script>
