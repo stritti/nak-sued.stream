@@ -19,6 +19,7 @@
         <b-img
           class="d-inline-block align-top"
           src="@/assets/logo.png"
+          alt="Livestream"
           height="20"
         />&nbsp;{{ event.url }}
       </a>

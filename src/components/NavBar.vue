@@ -13,6 +13,7 @@
           class="d-inline-block align-top"
           src="@/assets/logo.png"
           height="30"
+          alt="nak-sued.stream Logo"
         />
       </b-navbar-brand>
 
