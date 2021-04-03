@@ -4,14 +4,28 @@
       v-if="error"
       v-text="error"
     />
-    <div
-      v-if="isLoading"
-      style="max-width: 20rem;"
-      class="mx-auto my-5 align-items-center"
+    <b-skeleton-wrapper
+      :loading="isLoading"
+      style="width:100%"
     >
-      <b-spinner /> Lade Daten &hellip;
-    </div>
-    <template v-else>
+      <template #loading>
+        <b-card class="event my-3">
+          <template #header>
+            <b-skeleton width="100%" />
+          </template>
+          <b-skeleton width="85%" />
+          <b-skeleton width="55%" />
+          <b-skeleton width="70%" />
+        </b-card>
+        <b-card class="event my-3">
+          <template #header>
+            <b-skeleton width="100%" />
+          </template>
+          <b-skeleton width="85%" />
+          <b-skeleton width="55%" />
+          <b-skeleton width="70%" />
+        </b-card>
+      </template>
       <template v-if="hasEvents">
         <event-item
           v-for="event in eventList"
@@ -28,7 +42,7 @@
           Aktuell sind keine Livestreams geplant.
         </b-alert>
       </template>
-    </template>
+    </b-skeleton-wrapper>
   </div>
 </template>
 
