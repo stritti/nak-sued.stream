@@ -1,5 +1,8 @@
 <template>
-  <div class="privacy">
+  <div
+    v-once
+    class="privacy"
+  >
     <h1>Datenschutz</h1>
     <p>
       Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten

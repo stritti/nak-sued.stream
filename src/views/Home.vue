@@ -1,5 +1,8 @@
 <template>
-  <div class="home">
+  <div
+    v-once
+    class="home"
+  >
     <b-jumbotron
       header="NAK-Sued.stream"
       lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
