@@ -67,7 +67,15 @@
         </b-card-text>
         <hr>
         <b-card-text class="text-muted">
-          Die Zugangsdaten können in der Gemeinde erfragt werden.
+          Die Zugangsdaten können bei der/dem Verantworltichen angefragt werden:
+          <b-button
+            size="sm"
+            variant="outline-primary"
+            @click="$bvModal.show('bv-modal-pinrequest')"
+          >
+            Pin-Anfrage
+          </b-button>
+          <pin-request-form :slug="$route.params.url" />
         </b-card-text>
         <b-card-text class="text-muted">
           Wir freuen uns über alle Zuschauer:innen
@@ -81,12 +89,13 @@
 import congregationService from '@/services/congregation.service'
 import CodeInput from 'vue-verification-code-input'
 import EventList from '@/components/EventList.vue'
-import StreamingContact from '../components/StreamingContact.vue'
-import StreamingNotes from '../components/StreamingNotes.vue'
+import StreamingContact from '@/components/StreamingContact.vue'
+import StreamingNotes from '@/components/StreamingNotes.vue'
+import PinRequestForm from '@/components/contact/PinRequestForm.vue'
 
 export default {
   name: 'Stream',
-  components: { CodeInput, EventList, StreamingContact, StreamingNotes },
+  components: { CodeInput, EventList, StreamingContact, StreamingNotes, PinRequestForm },
   metaInfo: {
     title: 'Stream'
   },
