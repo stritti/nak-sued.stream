@@ -49,6 +49,20 @@ const congregationService = {
     }
     return true
   },
+  async getContactBySlug (slug) {
+    const filter = encodeURIComponent(`({slug} = "${slug}")`)
+    const response = await airtableBase
+      .get(`${BASE}?view=${ACTIVE_VIEW}&filterByFormula=${filter}&maxRecords=1`)
+
+    const resultList = response.data.records
+
+    return {
+      Name: resultList[0].fields.Name,
+      Firstname: resultList[0].fields.Firstname,
+      Lastname: resultList[0].fields.Lastname,
+      Mail: resultList[0].fields.Mail
+    }
+  },
   async request (data) {
     const response = await airtableBase.post(`${BASE}`, {
       records: [
