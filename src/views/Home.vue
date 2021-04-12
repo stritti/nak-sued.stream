@@ -76,11 +76,14 @@
       </b-row>
       <b-row>
         <b-col>
+          <a name="compare" />
           <h3>Vergleich</h3>
           <p>
-            Zu diesem Dienst gibt es Alternativen, welche die Funktionalitäten auch oder teilweise erfüllen:
+            Zu diesem Dienst gibt es Alternativen, welche die Funktionalitäten auch - oder zumindest teilweise - erfüllen:
           </p>
-          <feature-list />
+          <feature-list
+            class="my-5"
+          />
         </b-col>
       </b-row>
       <b-row>
