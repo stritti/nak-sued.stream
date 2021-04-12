@@ -4,8 +4,26 @@
     class="about"
   >
     <h1>Über NAK-Sued.stream</h1>
+    <b-alert show>
+      Für die Angaben in den Übersichten der Livestreams übernehmen die angegebenen
+      Ansprechpartner:innen die Verantwortung.
+    </b-alert>
     <p>
-      Diese Webseite wurde ehrenamtlich privat erstellt und wird auch privat betrieben.
+      Diese Webseite unterstützt die Kirchengemeinden bei der Bereitstellung der Livestreams
+      für die Zuschauer: Die teils kryptischen Links der Livestreams können im Terminkalender
+      der Gemeinden hinterlegt werden und erscheinen dann automatisch auf einer gemeindeeigenen
+      Übersicht, welche mit einem Zugangs-Pin geschützt ist.
+    </p>
+    <p>
+      Ein Gemeinde-Link führt immer zum aktuellen Livestream.
+    </p>
+    <p>
+      Die Livestreams können schon im Vorfeld eingerichtet und den Terminen zugeordnet
+      werden. Sie stehen den Zuschauer:innen automatisch zur Verfügung.
+    </p>
+    <hr>
+    <p>
+      Diese Webseite wird ehrenamtlich betreut und privat betrieben.
     </p>
     <p>
       Falls Sie den Betrieb dieser Webseite unterstützen möchten, dürfen Sie mir
@@ -20,10 +38,6 @@
         border="0"
         alt="Kaufe mir einen Kaffee auf ko-fi.com"
       ></a>
-    </p>
-    <p>
-      Für die Angaben in den Übersichten der Livestreams übernehmen die angegebenen
-      Ansprechpartner:innen die Verantwortung.
     </p>
   </div>
 </template>

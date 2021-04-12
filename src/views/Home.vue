@@ -8,7 +8,7 @@
       lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
     >
       <b-row>
-        <b-col md="4">
+        <b-col md="3">
           <b-img
             class="logo"
             src="@/assets/logo.png"
@@ -76,6 +76,15 @@
       </b-row>
       <b-row>
         <b-col>
+          <h3>Vergleich</h3>
+          <p>
+            Zu diesem Dienst gibt es Alternativen, welche die Funktionalitäten auch oder teilweise erfüllen:
+          </p>
+          <feature-list />
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
           <section>
             <h2>Livestream-Angebot der Gebietskirche Süddeutschland</h2>
             <p>
@@ -102,10 +111,15 @@
 </template>
 
 <script>
+import FeatureList from '@/components/FeatureList.vue'
 
 export default {
   name: 'Home',
+  components: {
+    FeatureList
+  },
   metaInfo: {
+
     title: 'Home'
   }
 }
