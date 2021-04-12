@@ -122,7 +122,6 @@ export default {
     FeatureList
   },
   metaInfo: {
-
     title: 'Home'
   }
 }
