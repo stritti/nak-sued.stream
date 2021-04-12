@@ -206,6 +206,25 @@
           />
         </td>
       </tr>
+      <tr>
+        <th scope="row">
+          Einrichten
+        </th>
+        <td>
+          <b-button
+            variant="primary"
+            to="/anfrage"
+          >
+            Anfrage stellen &hellip;
+          </b-button>
+        </td>
+        <td>
+          Über eigenes Server-Hosting
+        </td>
+        <td>
+          Passenden URL-Shortener suchen
+        </td>
+      </tr>
     </table>
   </div>
 </template>
