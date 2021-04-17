@@ -71,7 +71,7 @@
             icon="check-square-fill"
             variant="primary"
           /><br>
-          <small>5-stellige Pin</small>
+          <small>5-stellige Pin (kann auf Anfrage deaktivier werden)</small>
         </td>
         <td>
           <b-icon
