@@ -67,7 +67,7 @@
         </b-card-text>
         <hr>
         <b-card-text class="text-muted">
-          Die Zugangsdaten können bei der/dem Verantworltichen angefragt werden:
+          Die Zugangsdaten können bei der/dem Verantwortlichen angefragt werden:
           <b-button
             size="sm"
             variant="outline-primary"
