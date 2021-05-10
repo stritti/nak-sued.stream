@@ -2,8 +2,18 @@
   <section>
     <h3><a name="preparation" />Vorbereitung</h3>
     <ol>
-      <li>Zunächst müssen die Termine im CMS gepflegt sein.</li>
       <li>
+        Um den Teilnehmern eine schnelle Möglichkeit der Kontaktaufnahme zu bieten,
+        werden beim Einrichten <strong>Name</strong>, <strong>Mobil-Nummer</strong> und
+        <strong>E-Mail</strong> abgefragt. Diese Daten erscheinen auch auf der Übersicht
+        der Livestream-Termine.<br>
+        Zusätzlich wird eine <strong>5-stelligen Pin</strong> abgefragt.
+        Hier bietet sich an, die Pin z.B. von Perfon zu übernehmen.
+      </li>
+      <li>
+        <p>
+          Zunächst müssen die Termine im CMS gepflegt sein.
+        </p>
         <p>
           Für die YouTube-Links verwendet das System das meist ungenutzte Feld <em>Veranstalter</em>:
           Hier den Link zu dem jeweils geplanten Live-Stream eintragen. <strong>Auf der Übersicht werden
