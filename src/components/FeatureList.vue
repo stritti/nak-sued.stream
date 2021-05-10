@@ -225,6 +225,30 @@
         </tr>
         <tr>
           <th scope="row">
+            Austausch/Community
+          </th>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+            /><br>
+            <small>Slack Workspace</small>
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
             Einrichten
           </th>
           <td>
