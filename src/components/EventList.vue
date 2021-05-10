@@ -111,6 +111,7 @@ export default {
       if (this.eventList && this.eventList.length > 0) {
         const event = this.eventList[0]
         const today = new Date()
+        today.setMinutes(0)
         const start = new Date(today)
         start.setHours(start.getHours() + OFFSET_HOURS_START)
 
@@ -118,7 +119,10 @@ export default {
         end.setHours(end.getHours() + OFFSET_HOURS_END)
 
         if (start <= event.start && event.start <= end) {
-          window.location.href = event.url
+          const delayInMilliseconds = 3000 // 3 seconds
+          setTimeout(() => {
+            window.location.href = event.url
+          }, delayInMilliseconds)
         }
       }
     }
