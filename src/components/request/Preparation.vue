@@ -8,7 +8,8 @@
         <strong>E-Mail</strong> abgefragt. Diese Daten erscheinen auch auf der Übersicht
         der Livestream-Termine.<br>
         Zusätzlich wird eine <strong>5-stelligen Pin</strong> abgefragt.
-        Hier bietet sich an, die Pin z.B. von Perfon zu übernehmen.
+        Hier bietet sich an, die Pin z.B. von Perfon zu übernehmen.<br>
+        Dese Daten für die Beantragung bitte bereit halten.
       </li>
       <li>
         <p>
