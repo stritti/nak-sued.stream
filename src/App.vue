@@ -2,6 +2,7 @@
   <div id="app">
     <nav-bar />
     <main class="container content">
+      <notification />
       <router-view />
     </main>
     <footer-bar />
@@ -11,8 +12,9 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
+import Notification from './components/notification/Notification.vue'
 export default {
-  components: { NavBar, FooterBar },
+  components: { NavBar, FooterBar, Notification },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: 'NAK-Sued.stream',
@@ -25,7 +27,6 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/custom-vars.scss';
 body {
-  background-color: lighten($yellow, 45);
   height: 100%;
 }
 #app {
