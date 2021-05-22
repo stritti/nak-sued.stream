@@ -1,9 +1,13 @@
 import axios from 'axios'
 
+const TAG_LIST = []
+
 const buuiltCalendarService = {
   async getList (feed, urlField, filter) {
     const response = await axios.get(feed)
     let resultList = response.data.items.map((item) => {
+      this.extractTags(item)
+
       return {
         name: item[65],
         start: new Date(item[66] * 1000),
@@ -52,8 +56,15 @@ const buuiltCalendarService = {
     // sort ascending by starting date
     resultList.sort((a, b) => a.start.getTime() - b.start.getTime())
 
+    console.log(TAG_LIST)
     // reduce to next x events
     return resultList.slice(0, 8)
+  },
+
+  extractTags (item) {
+    item[73].forEach((tag) => {
+      if (TAG_LIST.indexOf(tag) === -1) { TAG_LIST.push(tag) }
+    })
   }
 }
 
