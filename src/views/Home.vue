@@ -84,12 +84,16 @@
           <feature-list
             class="my-5"
           />
+          <hr>
         </b-col>
       </b-row>
       <b-row>
-        <b-col>
+        <b-col
+          md="12"
+          lg="6"
+        >
           <section>
-            <h2>Livestream-Angebot der Gebietskirche Süddeutschland</h2>
+            <h2>Angebot der Gebietskirche Süddeutschland</h2>
             <p>
               Die
               <a
@@ -98,14 +102,44 @@
               >
                 Gebietskirche Süddeutschland
               </a>
-              der Neuapostolischen Kirche
-              hat einen öffentlichen
-              <a
-                href="https://www.youtube.com/c/NAKSueddeutschland"
-                target="_blank"
-              >YouTube-Kanal</a> auf welchem auch immer wieder
-              Gottesdienste live übertragen werden.
+              der Neuapostolischen Kirche überträgt immer wieder
+              Gottesdienste live:
             </p>
+            <ul>
+              <li>
+                <a href="https://www.youtube.com/c/NAKSueddeutschland">YouTube</a>
+              </li>
+            </ul>
+          </section>
+        </b-col>
+        <b-col>
+          <section>
+            <h2>Video-Archiv der Neuapostolischen Kirche</h2>
+            <p>
+              Eine umfangreiche Mediathek mit Ausschnitten aus Gottesdiensten
+              von Stammapostel Jean-Luc Schneider und Musikveranstaltungen der
+              vergangenen Jahre bietet die Neuapostolische Kirche International
+              auf <a href="https://nac.today">nac.today</a> und auf ihren
+              YouTube-Kanälen in den Sprachen Deutsch, Englisch, Französisch und Spanisch:
+            </p>
+            <ul>
+              <li>
+                Neuapostolische Kirche International, Deutsch,
+                <a href="https://bit.ly/naci_de">https://bit.ly/naci_de</a>
+              </li>
+              <li>
+                New Apostolic Church International, English,
+                <a href="https://bit.ly/naci_en">https://bit.ly/naci_en</a>
+              </li>
+              <li>
+                Iglesia Nueva Apostólica Internacional, Español,
+                <a href="https://bit.ly/naci_es">https://bit.ly/naci_es</a>
+              </li>
+              <li>
+                Eglise néo-apostolique Internationale, Français,
+                <a href="https://bit.ly/naci_fr">https://bit.ly/naci_fr</a>
+              </li>
+            </ul>
           </section>
         </b-col>
       </b-row>
