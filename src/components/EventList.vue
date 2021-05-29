@@ -117,13 +117,14 @@ export default {
         const end = new Date(today)
         end.setHours(end.getHours() + OFFSET_HOURS_END)
 
-        this.$gtag.event('stream_redirect', {
-          event_category: 'engagement',
-          event_label: 'Redirect to stream'
-        })
-
         if (start <= event.start && event.start <= end) {
-          window.location.href = event.url
+          this.$gtag.event('stream_redirect', {
+            event_category: 'engagement',
+            event_label: 'Redirect to stream'
+          })
+          setTimeout(() => {
+            window.location.href = event.url
+          }, 1500)
         }
       }
     }
