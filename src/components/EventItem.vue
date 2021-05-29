@@ -15,6 +15,7 @@
       <a
         v-if="event.url"
         :href="event.url"
+        @click="track"
       >
         <b-img
           class="d-inline-block align-top"
@@ -64,6 +65,14 @@ export default {
     },
     videoId () {
       return getIdFromURL(this.event.url)
+    }
+  },
+  methods: {
+    track () {
+      this.$gtag.event('stream_click', {
+        event_category: 'engagement',
+        event_label: 'Click to stream'
+      })
     }
   }
 }
