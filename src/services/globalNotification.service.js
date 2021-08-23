@@ -12,7 +12,6 @@ const globalNotification = {
         ...item.fields
       }
     })
-    console.log(resultList)
 
     return resultList
   }
