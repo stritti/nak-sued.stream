@@ -49,10 +49,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
-
-        v-text="
-        congregation.Mail"
