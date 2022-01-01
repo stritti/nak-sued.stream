@@ -211,7 +211,7 @@
           </td>
           <td>
             <b-icon icon="question-square" /><br>
-            <small>Muss auf dem Server eigerichtet werden, z.B. über
+            <small>Muss auf dem Server eingerichtet werden, z.B. über
               Server-Logs.</small>
           </td>
           <td>
