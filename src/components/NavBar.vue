@@ -27,8 +27,8 @@
           <b-nav-item to="/anfrage">
             Anfrage
           </b-nav-item>
-          <b-nav-item to="/kontakt">
-            Kontakt
+          <b-nav-item to="/verzeichnis">
+            Verzeichnis
           </b-nav-item>
           <b-nav-item to="/about">
             Über
@@ -42,6 +42,5 @@
 <script>
 export default {
   name: 'NavBar'
-
 }
 </script>
