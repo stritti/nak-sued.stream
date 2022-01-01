@@ -23,7 +23,7 @@
             </p>
             <p>
               Ein privates Projekt zur Unterstützung der Gemeinden und
-              Kirchenbezirke.
+              Kirchenbezirke - seit Februar 2021.
             </p>
             <b-button
               variant="primary"
