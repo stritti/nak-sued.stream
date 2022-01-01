@@ -10,15 +10,10 @@
             nak-sued.stream
           </th>
           <th width="25%">
-            Server
-            <a href="https://netgrade.de/301-weiterleitung-generator/">Weiterleitung</a>
+            Server Weiterleitung
           </th>
           <th width="25%">
-            URL-Shortener (z.B.
-            <a href="https://www.meingd.de/">meingd.de</a>,
-            <a href="https://www.rebrandly.com/">Rebrandly</a>,
-            <a href="https://bitly.com/">bit.ly</a>
-            , &hellip;)
+            URL-Shortener
           </th>
         </tr>
       </thead>
@@ -42,8 +37,8 @@
           <td>
             <b-icon icon="question-square" /><br>
             <small>
-              Nicht alle URL-Shortener erlauben das Ändern des
-              hinterlegten Links für einen neuen Stream.
+              Nicht alle URL-Shortener erlauben das Ändern des hinterlegten
+              Links für einen neuen Stream.
             </small>
           </td>
         </tr>
@@ -57,8 +52,8 @@
               variant="primary"
             /><br>
             <small>
-              Ist der kommende Livestream innerhalb der nächsten Stunde,
-              so wird dieser automatisch gestartet.
+              Ist der kommende Livestream innerhalb der nächsten Stunde, so wird
+              dieser automatisch gestartet.
             </small>
           </td>
           <td>
@@ -94,7 +89,9 @@
             /><br>
             <small>
               Je nach Server z.B. über
-              <a href="https://netgrade.de/301-weiterleitung-generator/">.htaccess</a>.
+              <a
+                href="https://netgrade.de/301-weiterleitung-generator/"
+              >.htaccess</a>.
             </small>
           </td>
           <td>
@@ -138,7 +135,8 @@
               icon="check-square-fill"
               variant="primary"
             /><br>
-            <small>Nahtlose Integration in den öffentlichen Terminkalender der Gemeinde.</small>
+            <small>Nahtlose Integration in den öffentlichen Terminkalender der
+              Gemeinde.</small>
           </td>
           <td>
             <b-icon
@@ -208,13 +206,13 @@
               icon="square"
               variant="danger"
             /><br>
-            <small>Derzeit nicht geplant, da die Statistik z.B. von YouTube aussagekräftiger ist.</small>
+            <small>Derzeit nicht geplant, da die Statistik z.B. von YouTube
+              aussagekräftiger ist.</small>
           </td>
           <td>
-            <b-icon
-              icon="question-square"
-            /><br>
-            <small>Muss auf dem Server eigerichtet werden, z.B. über Server-Logs.</small>
+            <b-icon icon="question-square" /><br>
+            <small>Muss auf dem Server eigerichtet werden, z.B. über
+              Server-Logs.</small>
           </td>
           <td>
             <b-icon
@@ -249,6 +247,26 @@
         </tr>
         <tr>
           <th scope="row">
+            Kosten
+          </th>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+            /><br>
+            gratis
+          </td>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+            /><br>
+            gratis
+          </td>
+          <td><small>Je nach Service und Ausbaustufe der Lizenz.</small></td>
+        </tr>
+        <tr>
+          <th scope="row">
             Einrichten
           </th>
           <td>
@@ -260,10 +278,26 @@
             </b-button>
           </td>
           <td>
-            Über Server-Hosting
+            Über Server-Hosting (siehe z.B.:
+            <a
+              href="https://netgrade.de/301-weiterleitung-generator/"
+            >Weiterleitung</a>)
           </td>
           <td>
-            Passenden URL-Shortener suchen
+            Passenden URL-Shortener suchen:
+            <a
+              href="https://meingd.de/"
+              target="_blank"
+            >meingd.de</a>,
+            <a
+              href="https://www.rebrandly.com/"
+              target="_blank"
+            >Rebrandly</a>,
+            <a
+              href="https://bitly.com/"
+              target="_blank"
+            >bit.ly</a>
+            , &hellip;
           </td>
         </tr>
       </tbody>
@@ -274,6 +308,5 @@
 <script>
 export default {
   name: 'FeatureList'
-
 }
 </script>
