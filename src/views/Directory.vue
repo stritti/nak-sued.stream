@@ -7,13 +7,13 @@
       class="my-5"
     >
       <b-icon icon="link45deg" />
-      Der angegebene Link konnte nicht gefunden werden.
-      Folgende Streams sind registriert:
+      Der angegebene Link konnte nicht gefunden werden. Folgende Streams sind
+      registriert:
     </b-alert>
     <h1>Verzeichnis</h1>
     <template v-if="isLoading">
       <div
-        style="max-width: 20rem;"
+        style="max-width: 20rem"
         class="my-5 mx-auto align-items-center loading"
       >
         <b-spinner /> Lade Daten &hellip;
@@ -32,9 +32,7 @@
         />
       </div>
       <div class="directory-list">
-        <template
-          v-for="stream in streamList"
-        >
+        <template v-for="stream in streamList">
           <h4
             v-if="stream.index"
             :key="stream.id"
@@ -89,20 +87,21 @@ export default {
   },
   mounted () {
     this.isLoading = true
-    congregationService.getList()
-      .then((result) => {
-        this.streamList = []
-        let index = null
-        result.forEach(item => {
+    congregationService.getList().then((result) => {
+      this.streamList = []
+      let index = null
+      result.forEach((item) => {
+        if (item.Kurzname) {
           if (item.Kurzname.charAt(0) && index !== item.Kurzname.charAt(0)) {
             index = item.Kurzname.charAt(0)
             this.register.push(index)
             this.streamList.push({ index: true, label: index })
           }
-          this.streamList.push(item)
-        })
-        this.isLoading = false
+        }
+        this.streamList.push(item)
       })
+      this.isLoading = false
+    })
   },
   methods: {
     linkGen (pageNum) {
@@ -127,6 +126,5 @@ export default {
   .stream-item {
     break-before: avoid;
   }
-
 }
 </style>
