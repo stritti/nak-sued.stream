@@ -3,16 +3,19 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th width="25%">
+          <th width="20%">
             Funktion
           </th>
-          <th width="25%">
+          <th width="20%">
             nak-sued.stream
           </th>
-          <th width="25%">
+          <th width="20%">
+            meinGD.de
+          </th>
+          <th width="20%">
             Server Weiterleitung
           </th>
-          <th width="25%">
+          <th width="20%">
             URL-Shortener
           </th>
         </tr>
@@ -26,12 +29,21 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
@@ -50,6 +62,7 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             /><br>
             <small>
               Ist der kommende Livestream innerhalb der nächsten Stunde, so wird
@@ -60,12 +73,21 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
             <b-icon
-              icon="check-square-fill"
-              variant="primary"
+              icon="square"
+              variant="danger"
+              aria-label="Nein"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+              aria-label="Nein"
             />
           </td>
         </tr>
@@ -77,10 +99,18 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             /><br>
             <small>
               5-stellige Pin, kann auf Anfrage deaktiviert werden.
             </small>
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+              aria-label="Nein"
+            />
           </td>
           <td>
             <b-icon
@@ -109,6 +139,7 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             /><br>
             <small>Sofern nicht schon vergeben.</small>
           </td>
@@ -116,12 +147,22 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
+            /><br>
+            <small>Sofern nicht schon vergeben.</small>
+          </td>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
             /><br>
             <small>Meist nur in kostenpflichtigen Pro-Versionen möglich.</small>
           </td>
@@ -134,9 +175,17 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             /><br>
             <small>Nahtlose Integration in den öffentlichen Terminkalender der
               Gemeinde.</small>
+          </td>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
+            />
           </td>
           <td>
             <b-icon
@@ -159,18 +208,28 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
             />
           </td>
         </tr>
@@ -182,18 +241,28 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+              aria-label="Nein"
             />
           </td>
         </tr>
@@ -210,6 +279,13 @@
               aussagekräftiger ist.</small>
           </td>
           <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
+            />
+          </td>
+          <td>
             <b-icon icon="question-square" /><br>
             <small>Muss auf dem Server eingerichtet werden, z.B. über
               Server-Logs.</small>
@@ -218,6 +294,7 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             />
           </td>
         </tr>
@@ -229,6 +306,7 @@
             <b-icon
               icon="check-square-fill"
               variant="primary"
+              aria-label="Ja"
             /><br>
             <small>Slack Workspace</small>
           </td>
@@ -236,12 +314,21 @@
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
             />
           </td>
           <td>
             <b-icon
               icon="square"
               variant="danger"
+              aria-label="Nein"
+            />
+          </td>
+          <td>
+            <b-icon
+              icon="square"
+              variant="danger"
+              aria-label="Nein"
             />
           </td>
         </tr>
@@ -249,6 +336,13 @@
           <th scope="row">
             Kosten
           </th>
+          <td>
+            <b-icon
+              icon="check-square-fill"
+              variant="primary"
+            /><br>
+            gratis
+          </td>
           <td>
             <b-icon
               icon="check-square-fill"
@@ -278,6 +372,13 @@
             </b-button>
           </td>
           <td>
+            via Mailanfrage:
+            <a
+              href="https://meingd.de/"
+              target="_blank"
+            >meingd.de</a>
+          </td>
+          <td>
             Über Server-Hosting (siehe z.B.:
             <a
               href="https://netgrade.de/301-weiterleitung-generator/"
@@ -285,10 +386,6 @@
           </td>
           <td>
             Passenden URL-Shortener suchen:
-            <a
-              href="https://meingd.de/"
-              target="_blank"
-            >meingd.de</a>,
             <a
               href="https://www.rebrandly.com/"
               target="_blank"
