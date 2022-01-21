@@ -246,9 +246,9 @@
           </td>
           <td>
             <b-icon
-              icon="square"
-              variant="danger"
-              aria-label="Nein"
+              icon="check-square-fill"
+              variant="primary"
+              aria-label="Ja"
             />
           </td>
           <td>
