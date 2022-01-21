@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -8,52 +8,52 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: HomeView
   },
   {
     path: '/anfrage',
     name: 'Request',
-    component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue')
+    component: () => import(/* webpackChunkName: "request" */ '../views/RequestView.vue')
   },
   {
     path: '/requested',
     name: 'Requested',
-    component: () => import(/* webpackChunkName: "request" */ '../views/Requested.vue')
+    component: () => import(/* webpackChunkName: "request" */ '../views/RequestedView.vue')
   },
   {
     path: '/verzeichnis',
     name: 'Directory',
-    component: () => import(/* webpackChunkName: "directory" */ '../views/Directory.vue'),
+    component: () => import(/* webpackChunkName: "directory" */ '../views/DirectoryView.vue'),
     props: true
   },
   {
     path: '/kontakt',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+    component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue')
   },
   {
     path: '/faq',
     name: 'FAQ',
-    component: () => import(/* webpackChunkName: "faq" */ '../views/FAQ.vue')
+    component: () => import(/* webpackChunkName: "faq" */ '../views/FaqView.vue')
   },
   {
     path: '/impessum',
     name: 'Imprint',
-    component: () => import(/* webpackChunkName: "imprint" */ '../views/Imprint.vue')
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/ImprintView.vue')
   },
   {
     path: '/datenschutz',
     name: 'Privacy',
-    component: () => import(/* webpackChunkName: "imprint" */ '../views/Privacy.vue')
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/PrivacyView.vue')
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "imprint" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "imprint" */ '../views/AboutView.vue')
   },
   {
     path: '/:url',
-    component: () => import(/* webpackChunkName: "streams" */ '../views/Streams.vue')
+    component: () => import(/* webpackChunkName: "streams" */ '../views/StreamsView.vue')
   }
 ]
 

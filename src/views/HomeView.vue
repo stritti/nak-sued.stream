@@ -179,7 +179,7 @@ import FeatureList from '@/components/FeatureList.vue'
 import MetricCard from '@/components/metric/MetricCard.vue'
 
 export default {
-  name: 'Home',
+  name: 'HomeView',
   components: {
     FeatureList,
     MetricCard
