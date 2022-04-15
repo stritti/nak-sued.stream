@@ -12,7 +12,7 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
-import NotificationList from './components/notification/NotificationList.vue'
+import NotificationList from '@/components/notification/NotificationList.vue'
 export default {
   components: { NavBar, FooterBar, NotificationList },
   metaInfo: {
