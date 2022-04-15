@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar />
     <main class="container content">
-      <notification />
+      <notification-list />
       <router-view />
     </main>
     <footer-bar />
@@ -12,9 +12,9 @@
 <script>
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
-import Notification from './components/notification/Notification.vue'
+import NotificationList from './components/notification/NotificationList.vue'
 export default {
-  components: { NavBar, FooterBar, Notification },
+  components: { NavBar, FooterBar, NotificationList },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: 'NAK-Sued.stream',

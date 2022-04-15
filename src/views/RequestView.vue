@@ -19,22 +19,22 @@
       <li><a href="#request">Testen und Aufnahme beantragen</a></li>
     </ol>
     <hr>
-    <requirements />
+    <requirements-section />
     <hr>
-    <preparation />
+    <preparation-section />
     <hr>
     <request-form />
   </div>
 </template>
 
 <script>
-import Requirements from '@/components/request/Requirements.vue'
-import Preparation from '@/components/request/Preparation.vue'
+import RequirementsSection from '@/components/request/RequirementsSection.vue'
+import PreparationSection from '@/components/request/PreparationSection.vue'
 import RequestForm from '@/components/request/RequestForm.vue'
 
 export default {
   name: 'Request',
-  components: { Requirements, Preparation, RequestForm },
+  components: { RequirementsSection, PreparationSection, RequestForm },
   metaInfo: {
     title: 'Anfrage'
   }

@@ -21,7 +21,7 @@
 <script>
 import globalNotification from '@/services/globalNotification.service'
 export default {
-  name: 'Notification',
+  name: 'NotificationList',
   data () {
     return {
       notificationList: []
@@ -44,7 +44,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
