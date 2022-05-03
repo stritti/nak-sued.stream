@@ -39,7 +39,13 @@
           show
           class="my-5"
         >
-          Aktuell sind keine Livestreams geplant.
+          Aktuell sind keine Livestreams geplant.<br>
+          Weitere Gemeinden mit Livestreams finden sich im
+          <router-link
+            to="/verzeichnis"
+          >
+            <strong>Verzeichnis.</strong>
+          </router-link>
         </b-alert>
       </template>
     </b-skeleton-wrapper>
