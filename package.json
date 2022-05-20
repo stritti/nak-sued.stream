@@ -34,7 +34,7 @@
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.19.1",
     "sass": "^1.51.0",
-    "sass-loader": "^12.6.0",
+    "sass-loader": "^13.0.0",
     "vue-cli-plugin-bootstrap-vue": "^0.8.2",
     "vue-template-compiler": "^2.6.14"
   },
