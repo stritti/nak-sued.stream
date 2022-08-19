@@ -25,12 +25,27 @@
               Ein privates Projekt zur Unterstützung der Gemeinden und
               Kirchenbezirke - seit Februar 2021.
             </p>
-            <b-button
-              variant="primary"
-              to="/anfrage"
-            >
-              Anfrage stellen &hellip;
-            </b-button>
+            <b-row>
+              <b-col  md="6">
+                <h4>Übersicht der Streams</h4>
+                <p>Übersicht der aktuell registrierten Streams:</p>
+                <b-button
+                  variant="primary"
+                  to="/verzeichnis"
+                >
+                  Stream-Verzeichnis
+                </b-button>
+              </b-col>
+              <b-col>
+                <h4>Neuen Stream anmelden</h4>
+                <p>Einen Stream für eine Gemeinde oder Bezirk anmelden:</p>
+                <b-button
+                  to="/anfrage"
+                >
+                  Aufnahmeantrag stellen &hellip;
+                </b-button>
+              </b-col>
+            </b-row>
           </div>
         </b-col>
       </b-row>
