@@ -16,7 +16,7 @@
     "vue": "^2.6.14",
     "vue-gtag": "^1.16.1",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.5.4",
+    "vue-router": "^3.6.3",
     "vue-simple-markdown": "^1.1.5",
     "vue-verification-code-input": "^1.0.0",
     "vue-youtube-embed": "^2.2.2"
