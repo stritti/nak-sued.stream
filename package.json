@@ -11,7 +11,7 @@
     "@emailjs/browser": "^3.10.0",
     "axios": "^1.3.4",
     "bootstrap-vue": "^2.23.1",
-    "core-js": "^3.29.1",
+    "core-js": "^3.30.1",
     "dotenv": "^16.0.3",
     "vue": "^2.7.12",
     "vue-gtag": "^1.16.1",
