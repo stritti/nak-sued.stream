@@ -77,19 +77,19 @@
         <b-col>
           <metric-card
             value="20"
-            description="registrierte Streams"
+            description="aktive Streams"
           />
         </b-col>
         <b-col>
           <metric-card
-            value="~2.800"
-            description="aktive Nutzer"
+            value="~12.000"
+            description="wiederkehrende Nutzer (seit 03.2021)"
           />
         </b-col>
         <b-col>
           <metric-card
-            value=">30.000"
-            description="erfolgreiche Weiterleitungen"
+            value=">78.000"
+            description="erfolgreiche Weiterleitungen (seit 03.2021)"
           />
         </b-col>
       </b-row>
