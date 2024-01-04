@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "axios": "^1.6.0",
+    "axios": "^1.6.4",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.33.2",
     "dotenv": "^16.3.1",
