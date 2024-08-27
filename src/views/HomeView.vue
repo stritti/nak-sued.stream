@@ -114,18 +114,6 @@
           </section>
         </b-col>
       </b-row>
-      <b-row class="mt-5">
-        <b-col>
-          <a name="compare" />
-          <h3>Vergleich</h3>
-          <p>
-            Zu diesem Dienst gibt es Alternativen, welche die Funktionalitäten
-            auch - oder zumindest teilweise - erfüllen:
-          </p>
-          <feature-list class="my-5" />
-          <hr>
-        </b-col>
-      </b-row>
       <b-row>
         <b-col
           md="12"
@@ -145,6 +133,9 @@
               live:
             </p>
             <ul>
+              <li>
+                <a href="https://iptv.nak.org/">IPTV der Neuapostolischen Kirche</a>
+              </li>
               <li>
                 <a
                   href="https://www.youtube.com/c/NAKSueddeutschland"
