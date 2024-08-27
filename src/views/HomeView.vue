@@ -112,6 +112,7 @@
               Neuapostolischen Kirche gratis.
             </p>
           </section>
+          <hr>
         </b-col>
       </b-row>
       <b-row>
