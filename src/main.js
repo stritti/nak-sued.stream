@@ -1,24 +1,22 @@
-import './plugins/bootstrap-vue'
-import Vue from 'vue'
-import VueYouTubeEmbed from 'vue-youtube-embed'
-import VueMeta from 'vue-meta'
+import { createApp } from 'vue'
+import { createMetaManager } from 'vue-meta'
 import VueGtag from 'vue-gtag'
 import VueSimpleMarkdown from 'vue-simple-markdown'
 import 'vue-simple-markdown/dist/vue-simple-markdown.css'
 import App from './App.vue'
 import router from './router'
+import BootstrapVue3 from 'bootstrap-vue-3'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-Vue.use(VueMeta)
-Vue.use(VueYouTubeEmbed)
-Vue.use(VueSimpleMarkdown)
-
-Vue.use(VueGtag, {
+app.use(createMetaManager())
+app.use(VueSimpleMarkdown)
+app.use(BootstrapVue3)
+app.use(VueGtag, {
   config: { id: 'G-7XBY4YQ68R' }
-}, router)
+})
+app.use(router)
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app')

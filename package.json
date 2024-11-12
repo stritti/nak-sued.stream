@@ -11,27 +11,26 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "axios": "^1.7.7",
-    "bootstrap-vue": "^2.23.1",
+    "bootstrap": "^5.3.2",
+    "bootstrap-vue-3": "^0.5.1",
     "core-js": "^3.38.1",
     "dotenv": "^16.4.5",
-    "vue": "^2.7.16",
-    "vue-gtag": "^1.16.1",
-    "vue-meta": "^2.4.0",
-    "vue-router": "^3.6.5",
+    "vue": "^3.4.15",
+    "vue-gtag": "^2.0.1",
+    "vue-meta": "^3.0.0-alpha.7",
+    "vue-router": "^4.2.5",
     "vue-simple-markdown": "^1.1.5",
     "vue-verification-code-input": "^1.0.0",
-    "vue-youtube-embed": "^2.2.2"
+    "@vue/compat": "^3.4.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.4",
     "@vue/cli-plugin-router": "^5.0.4",
     "@vue/cli-service": "^5.0.8",
-    "babel-eslint": "^10.1.0",
+    "@vue/compiler-sfc": "^3.4.15",
     "eslint-plugin-vue": "^9.29.1",
-    "node-sass": "^9.0.0",
-    "sass-loader": "^16.0.2",
-    "vue-cli-plugin-bootstrap-vue": "^0.8.2",
-    "vue-template-compiler": "^2.7.16"
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0"
   },
   "browserslist": [
     "> 0.2%",
