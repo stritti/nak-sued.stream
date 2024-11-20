@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { getIdFromURL } from 'vue-youtube-embed'
+// Temporarily remove YouTube embed functionality
 
 const DATE_FORMAT = {
   weekday: 'short',
@@ -64,7 +64,8 @@ export default {
       return ''
     },
     videoId () {
-      return getIdFromURL(this.event.url)
+      // Temporarily removed YouTube embed functionality
+      return null
     }
   },
   methods: {
