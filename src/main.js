@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import VueGtag from 'vue-gtag'
-import VueMarkdownRender from 'vue-markdown-render'
+import { VueMarkdown } from 'vue-markdown-render'
 import App from './App.vue'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -9,7 +9,7 @@ import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 
 const app = createApp(App)
 
-app.use(VueMarkdownRender)
+app.use(VueMarkdown)
 app.use(VueGtag, {
   config: { id: 'G-7XBY4YQ68R' }
 })
