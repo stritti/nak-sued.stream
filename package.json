@@ -20,7 +20,7 @@
     "vue-gtag": "^2.0.1",
     "vue-meta": "^3.0.0-alpha.7",
     "vue-router": "^4.2.5",
-    "vue-simple-markdown": "^2.0.0"
+    "vue-markdown-render": "^1.1.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",
