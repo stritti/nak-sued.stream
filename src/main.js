@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createMetaManager } from 'vue-meta'
 import VueGtag from 'vue-gtag'
 import VueSimpleMarkdown from 'vue-simple-markdown'
 import 'vue-simple-markdown/dist/vue-simple-markdown.css'
@@ -10,7 +9,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const app = createApp(App)
 
-app.use(createMetaManager())
 app.use(VueSimpleMarkdown)
 app.use(VueGtag, {
   config: { id: 'G-7XBY4YQ68R' }
