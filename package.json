@@ -15,7 +15,7 @@
     "core-js": "^3.41.0",
     "dotenv": "^16.4.7",
     "vue": "^2.7.16",
-    "vue-gtag": "^1.16.1",
+    "vue-gtag": "^3.2.0",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.6.5",
     "vue-simple-markdown": "^1.1.5",
