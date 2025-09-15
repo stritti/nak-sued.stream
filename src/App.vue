@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/custom-vars.scss';
 body {
   height: 100%;
 }

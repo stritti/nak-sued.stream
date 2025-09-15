@@ -111,9 +111,22 @@ export default {
   },
   methods: {
     showPinRequestModal() {
-      // Use a different approach since $bvModal is not available in Bootstrap Vue Next
-      document.getElementById('bv-modal-pinrequest').classList.add('show')
-      document.getElementById('bv-modal-pinrequest').style.display = 'block'
+      // Verwende den Modal-Composable von Bootstrap Vue Next
+      const modal = document.querySelector('#bv-modal-pinrequest');
+      if (modal) {
+        // Füge die notwendigen Klassen und Stile hinzu, um das Modal anzuzeigen
+        modal.classList.add('show');
+        modal.style.display = 'block';
+        document.body.classList.add('modal-open');
+        
+        // Erstelle den Backdrop, falls er nicht existiert
+        let backdrop = document.querySelector('.modal-backdrop');
+        if (!backdrop) {
+          backdrop = document.createElement('div');
+          backdrop.classList.add('modal-backdrop', 'fade', 'show');
+          document.body.appendChild(backdrop);
+        }
+      }
     },
     onPinComplete (pin) {
       this.loadCongregation(this.$route.params.url, pin)

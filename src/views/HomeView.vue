@@ -198,8 +198,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/custom-vars.scss";
-
 .bible-text {
   text-decoration: none;
   font-size: 1.2rem;

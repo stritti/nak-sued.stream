@@ -1,9 +1,6 @@
-
-
+// Override Bootstrap variables
 $primary: rgb(87, 147, 201);
-
 $enable-responsive-font-sizes: true;
 
-// Import Bootstrap and BootstrapVue source SCSS files
+// Import Bootstrap source SCSS files
 @import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue-next/dist/bootstrap-vue-next.css';
