@@ -11,25 +11,28 @@
     <template v-if="congregation">
       <h1>Livestreams</h1>
       <h2 v-text="congregation.Name" />
-      <p>
-        Folgende Livestreams sind aktuell geplant:
-      </p>
+
       <BRow>
         <BCol
           md="8"
           sm="12"
         >
-          <EventList
-            v-if="congregation"
-            :feed-url="congregation.Feed"
-            :url-field="congregation.Field"
-            :filter="congregation.Filter"
-          />
-          <p class="my-5">
-            Bitte beachten Sie, dass bei dem Besuch der Livestreams
-            Ihre personenbezogenen Daten von der Streamingplattform (z. B. YouTube)
-            verarbeitet werden.
-          </p>
+          <span v-if="hasYouTubeService">
+            <p>
+              Folgende Livestreams sind aktuell geplant:
+            </p>
+            <EventList
+              v-if="congregation"
+              :feed-url="congregation.Feed"
+              :url-field="congregation.Field"
+              :filter="congregation.Filter"
+            />
+            <p class="my-5">
+              Bitte beachten Sie, dass bei dem Besuch der Livestreams
+              Ihre personenbezogenen Daten von der Streamingplattform (z. B. YouTube)
+              verarbeitet werden.
+            </p>
+          </span>
         </BCol>
         <BCol
           md="4"
@@ -106,6 +109,20 @@ export default {
       isPinRequired: null
     }
   },
+  computed: {
+    hasYouTubeService() {
+      if (!this.congregation || !this.congregation.Services) {
+        return false;
+      }
+      // Prüfen, ob Services ein Array ist oder ein String
+      if (Array.isArray(this.congregation.Services)) {
+        return this.congregation.Services.includes('YouTube');
+      } else {
+        return this.congregation.Services === 'YouTube' ||
+               this.congregation.Services.includes('YouTube');
+      }
+    }
+  },
   mounted () {
     this.loadIsPinRequired(this.$route.params.url)
   },
@@ -118,7 +135,7 @@ export default {
         modal.classList.add('show');
         modal.style.display = 'block';
         document.body.classList.add('modal-open');
-        
+
         // Erstelle den Backdrop, falls er nicht existiert
         let backdrop = document.querySelector('.modal-backdrop');
         if (!backdrop) {
