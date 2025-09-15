@@ -55,10 +55,10 @@
         class="mx-auto my-5 align-items-center"
       >
         <b-card-text>
-          <code-input
+          <pin-input
             class="input"
-            :fields="5"
-            auto-focus
+            :length="5"
+            :auto-focus="true"
             @complete="onPinComplete"
           />
         </b-card-text>
@@ -87,15 +87,15 @@
 
 <script>
 import congregationService from '@/services/congregation.service'
-import CodeInput from 'vue-verification-code-input'
 import EventList from '@/components/EventList.vue'
 import StreamingContact from '@/components/StreamingContact.vue'
 import StreamingNotes from '@/components/StreamingNotes.vue'
 import PinRequestForm from '@/components/contact/PinRequestForm.vue'
+import PinInput from '@/components/PinInput.vue'
 
 export default {
   name: 'Stream',
-  components: { CodeInput, EventList, StreamingContact, StreamingNotes, PinRequestForm },
+  components: { PinInput, EventList, StreamingContact, StreamingNotes, PinRequestForm },
   metaInfo: {
     title: 'Stream'
   },
@@ -164,9 +164,5 @@ export default {
 </script>
 
 <style lang="scss">
-.react-code-input {
-  > input {
-    font-family: var(--font-family-monospace) !important
-  }
-}
+/* Custom styles for pin input can be added here if needed */
 </style>
