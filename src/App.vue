@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <BOrchestrator />
     <NavBar />
     <main class="container content">
       <NotificationList />

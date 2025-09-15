@@ -1,35 +1,15 @@
 import { createApp } from 'vue'
+import {createBootstrap} from 'bootstrap-vue-next/plugins/createBootstrap'
 import VueGtag from 'vue-gtag'
 import Markdown from 'vue3-markdown-it'
 import App from './App.vue'
 import router from './router'
-
-import { BButton, BCard, BCardText, BCol, BContainer, BRow, BImg, BNavbar,
-  BNavbarBrand, BNavbarToggle, BNavbarNav, BNavItem, BCollapse, BAlert,
-  BSpinner } from 'bootstrap-vue-next'
 import BJumbotron from './components/BJumbotron.vue'
-
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 
 const app = createApp(App)
 
-// Register Bootstrap Vue components
-app.component('BButton', BButton)
-app.component('BCard', BCard)
-app.component('BCardText', BCardText)
-app.component('BCol', BCol)
-app.component('BContainer', BContainer)
-app.component('BRow', BRow)
-app.component('BImg', BImg)
-app.component('BNavbar', BNavbar)
-app.component('BNavbarBrand', BNavbarBrand)
-app.component('BNavbarToggle', BNavbarToggle)
-app.component('BNavbarNav', BNavbarNav)
-app.component('BNavItem', BNavItem)
-app.component('BCollapse', BCollapse)
-app.component('BAlert', BAlert)
-app.component('BSpinner', BSpinner)
+app.use(createBootstrap())
+
 app.component('BJumbotron', BJumbotron)
 
 // Register Markdown component

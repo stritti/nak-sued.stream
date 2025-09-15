@@ -6,7 +6,7 @@
       variant="warning"
       class="my-5"
     >
-      <b-icon icon="link45deg" />
+      <IBiLink45deg />
       Der angegebene Link konnte nicht gefunden werden. Folgende Streams sind
       registriert:
     </b-alert>
@@ -20,22 +20,11 @@
       </div>
     </template>
     <template v-else>
-      <div class="overflow-auto">
-        <b-pagination-nav
-          :link-gen="linkGen"
-          :page-gen="pageGen"
-          base-url="#"
-          limit="20"
-          hide-goto-end-buttons
-          pills
-          :number-of-pages="pageLength"
-        />
-      </div>
       <div class="directory-list">
         <template v-for="stream in streamList">
           <h4
             v-if="stream.index"
-            :key="stream.id"
+            :key="'index-' + stream.label"
             class="mt-3"
           >
             <a :name="stream.label" />
@@ -43,7 +32,7 @@
           </h4>
           <stream-item
             v-else
-            :key="stream.id"
+            :key="'stream-' + stream.id"
             class="stream-item"
             :stream="stream"
           />

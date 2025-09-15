@@ -23,7 +23,7 @@
         <b-card
           style="max-width:450px"
           class="my-5"
-          img-src="@/assets/hilfe/termin-eintrag.png"
+          img-src="/assets/hilfe/termin-eintrag.png"
           img-alt="Termin Eintrag mit Link"
           img-top
         >
@@ -43,7 +43,7 @@
         <b-card
           style="max-width:580px"
           class="my-5"
-          img-src="@/assets/hilfe/config-export.png"
+          img-src="/assets/hilfe/config-export.png"
           img-alt="Einstellungen für den Export"
           img-top
         >
@@ -58,7 +58,7 @@
         </p>
         <b-card
           class="my-5"
-          img-src="@/assets/hilfe/export-link.png"
+          img-src="/assets/hilfe/export-link.png"
           img-alt="Einstellungen für den Export"
           img-top
         >
@@ -73,7 +73,7 @@
           <b-card
             style="max-width:580px"
             class="my-5"
-            img-src="@/assets/hilfe/json-export.png"
+            img-src="/assets/hilfe/json-export.png"
             img-alt="Beispiel eines Exports"
             img-top
           >

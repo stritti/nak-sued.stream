@@ -1,10 +1,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
+import Icons from 'unplugin-icons/vite'
+import Components from 'unplugin-vue-components/vite'
+import {BootstrapVueNextResolver} from 'bootstrap-vue-next/resolvers'
+import IconsResolve from 'unplugin-icons/resolver'
 
 export default defineConfig({
   plugins: [
     vue(),
+    Components({
+      resolvers: [BootstrapVueNextResolver(), IconsResolve()],
+      dts: true,
+    }),
+    Icons({
+      compiler: 'vue3',
+      autoInstall: true,
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
