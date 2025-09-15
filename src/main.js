@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import BootstrapVueNext, { BButton, BCard, BCardText, BCol, BContainer, BRow, BImg, BNavbar, 
   BNavbarBrand, BNavbarToggle, BNavbarNav, BNavItem, BCollapse, BAlert, 
   BSpinner } from 'bootstrap-vue-next'
+import BJumbotron from './components/BJumbotron.vue'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 
 const app = createApp(App)
@@ -27,6 +28,7 @@ app.component('BNavItem', BNavItem)
 app.component('BCollapse', BCollapse)
 app.component('BAlert', BAlert)
 app.component('BSpinner', BSpinner)
+app.component('BJumbotron', BJumbotron)
 
 // Register Markdown component
 app.component('VueMarkdown', Markdown)

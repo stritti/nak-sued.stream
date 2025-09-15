@@ -3,7 +3,7 @@
     v-once
     class="home"
   >
-    <b-jumbotron
+    <BJumbotron
       header="NAK-Sued.stream"
       lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
     >
@@ -14,8 +14,8 @@
             src="@/assets/logo.png"
             fluid
           />
-        </b-col>
-        <b-col>
+        </BCol>
+        <BCol>
           <div class="description">
             <p>
               Link-Support für die Livestreams der Gottesdienste der
@@ -29,30 +29,30 @@
               <b-col  md="6">
                 <h4>Übersicht der Streams</h4>
                 <p>Übersicht der aktuell registrierten Streams:</p>
-                <b-button
+                <BButton
                   variant="primary"
                   to="/verzeichnis"
                 >
                   Stream-Verzeichnis
-                </b-button>
+                </BButton>
               </b-col>
               <b-col>
                 <h4>Neuen Stream anmelden</h4>
                 <p>Einen Stream für eine Gemeinde oder Bezirk anmelden:</p>
-                <b-button
+                <BButton
                   to="/anfrage"
                 >
                   Aufnahmeantrag stellen &hellip;
-                </b-button>
+                </BButton>
               </b-col>
             </b-row>
           </div>
-        </b-col>
-      </b-row>
-    </b-jumbotron>
+        </BCol>
+      </BRow>
+    </BJumbotron>
     <section>
-      <b-row>
-        <b-col md="6">
+      <BRow>
+        <BCol md="6">
           <section>
             <h2>Livestreams für die Gemeinden</h2>
             <p>
@@ -62,8 +62,8 @@
               Livestreams Pin-geschützt anbieten zu können.
             </p>
           </section>
-        </b-col>
-        <b-col>
+        </BCol>
+        <BCol>
           <div class="bible-text my-5">
             <p>
               Und er sprach zu ihnen: Gehet hin in alle Welt und predigt das
@@ -71,30 +71,30 @@
             </p>
             <p>&dash; Markus 16,15</p>
           </div>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col>
+        </BCol>
+      </BRow>
+      <BRow>
+        <BCol>
           <metric-card
             value="20"
             description="aktive Streams"
           />
-        </b-col>
-        <b-col>
+        </BCol>
+        <BCol>
           <metric-card
             value="~12.000"
             description="wiederkehrende Nutzer (seit 03.2021)"
           />
-        </b-col>
-        <b-col>
+        </BCol>
+        <BCol>
           <metric-card
             value=">78.000"
             description="erfolgreiche Weiterleitungen (seit 03.2021)"
           />
-        </b-col>
-      </b-row>
-      <b-row class="mt-5">
-        <b-col>
+        </BCol>
+      </BRow>
+      <BRow class="mt-5">
+        <BCol>
           <section>
             <h3>Voraussetzungen</h3>
             <p>
@@ -113,10 +113,10 @@
             </p>
           </section>
           <hr>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
+        </BCol>
+      </BRow>
+      <BRow>
+        <BCol
           md="12"
           lg="6"
         >
