@@ -69,25 +69,25 @@
               Und er sprach zu ihnen: Gehet hin in alle Welt und predigt das
               Evangelium aller Kreatur.
             </p>
-            <p>&dash; Markus 16,15</p>
+            <p>&mdash; Markus 16,15</p>
           </div>
         </BCol>
       </BRow>
       <BRow>
         <BCol>
-          <metric-card
+          <MetricCard
             value="20"
             description="aktive Streams"
           />
         </BCol>
         <BCol>
-          <metric-card
+          <MetricCard
             value="~12.000"
             description="wiederkehrende Nutzer (seit 03.2021)"
           />
         </BCol>
         <BCol>
-          <metric-card
+          <MetricCard
             value=">78.000"
             description="erfolgreiche Weiterleitungen (seit 03.2021)"
           />

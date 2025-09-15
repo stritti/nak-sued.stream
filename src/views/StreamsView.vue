@@ -19,7 +19,7 @@
           md="8"
           sm="12"
         >
-          <event-list
+          <EventList
             v-if="congregation"
             :feed-url="congregation.Feed"
             :url-field="congregation.Field"
@@ -35,12 +35,12 @@
           md="4"
           sm="12"
         >
-          <streaming-notes
+          <StreamingNotes
             :notes="congregation.Notes"
             class="my-3"
           />
 
-          <streaming-contact
+          <StreamingContact
             :congregation="congregation"
             class="my-5"
           />
@@ -75,7 +75,7 @@
           >
             Pin-Anfrage
           </BButton>
-          <pin-request-form :slug="$route.params.url" />
+          <PinRequestForm :slug="$route.params.url" />
         </BCardText>
         <BCardText class="text-muted">
           Wir freuen uns über alle Zuschauer:innen
