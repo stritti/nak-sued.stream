@@ -1,16 +1,15 @@
 <template>
-  <BApp id="app">
+  <div id="app">
     <nav-bar />
     <main class="container content">
       <notification-list />
       <router-view />
     </main>
     <footer-bar />
-  </BApp>
+  </div>
 </template>
 
 <script>
-import BApp from 'bootstrap-vue-next'
 import NavBar from '@/components/NavBar.vue'
 import FooterBar from '@/components/FooterBar.vue'
 import NotificationList from '@/components/notification/NotificationList.vue'
