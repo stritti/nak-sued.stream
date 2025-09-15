@@ -1,41 +1,41 @@
 <template>
-  <b-navbar
+  <BNavbar
     variant="dark"
     toggleable="md"
   >
-    <b-container>
-      <b-navbar-brand
+    <BContainer>
+      <BNavbarBrand
         to="/"
         title="Nak-Sued.stream"
       >
-        <b-img
+        <BImg
           class="d-inline-block align-top"
           src="/assets/logo.png"
           height="30"
           alt="nak-sued.stream Logo"
         />
-      </b-navbar-brand>
+      </BNavbarBrand>
 
-      <b-navbar-toggle target="nav-collapse" />
+      <BNavbarToggle target="nav-collapse" />
 
-      <b-collapse
+      <BCollapse
         id="nav-collapse"
         is-nav
       >
-        <b-navbar-nav>
-          <b-nav-item to="/verzeichnis">
+        <BNavbarNav>
+          <BNavItem to="/verzeichnis">
             Verzeichnis
-          </b-nav-item>
-          <b-nav-item to="/anfrage">
+          </BNavItem>
+          <BNavItem to="/anfrage">
             Anfrage
-          </b-nav-item>
-          <b-nav-item to="/about">
+          </BNavItem>
+          <BNavItem to="/about">
             Über
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-container>
-  </b-navbar>
+          </BNavItem>
+        </BNavbarNav>
+      </BCollapse>
+    </BContainer>
+  </BNavbar>
 </template>
 
 <script>
