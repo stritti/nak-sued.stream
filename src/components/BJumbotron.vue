@@ -1,9 +1,11 @@
 <template>
-  <div class="jumbotron">
-    <h1 v-if="header" class="display-4">{{ header }}</h1>
-    <p v-if="lead" class="lead">{{ lead }}</p>
-    <hr v-if="$slots.default" class="my-4">
-    <slot></slot>
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-3">
+      <h1 v-if="header" class="display-4">{{ header }}</h1>
+      <p v-if="lead" class="lead">{{ lead }}</p>
+      <hr v-if="$slots.default" class="my-4">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -22,18 +24,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #e9ecef;
-  border-radius: 0.3rem;
-}
-
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 4rem 2rem;
-  }
-}
-</style>

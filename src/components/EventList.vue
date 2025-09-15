@@ -137,3 +137,86 @@ export default {
   }
 }
 </script>
+<template>
+  <div class="event-list">
+    <BSkeletonWrapper v-if="isLoading">
+      <div v-for="i in 3" :key="i" class="mb-3">
+        <BSkeleton width="85%" height="24px" class="mb-1"></BSkeleton>
+        <BSkeleton width="60%" height="16px" class="mb-1"></BSkeleton>
+        <BSkeleton width="40%" height="16px"></BSkeleton>
+      </div>
+    </BSkeletonWrapper>
+    <div v-else-if="events.length === 0" class="no-events">
+      <p>Aktuell sind keine Livestreams geplant.</p>
+    </div>
+    <div v-else>
+      <EventItem 
+        v-for="event in events" 
+        :key="event.id" 
+        :event="event" 
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import EventItem from './EventItem.vue'
+import buuiltCalendarService from '@/services/buuiltCalendar.service'
+
+export default {
+  name: 'EventList',
+  components: {
+    EventItem
+  },
+  props: {
+    feedUrl: {
+      type: String,
+      required: true
+    },
+    urlField: {
+      type: String,
+      default: 'organizer'
+    },
+    filter: {
+      type: String,
+      default: ''
+    }
+  },
+  data() {
+    return {
+      events: [],
+      isLoading: true
+    }
+  },
+  mounted() {
+    this.loadEvents()
+  },
+  methods: {
+    loadEvents() {
+      this.isLoading = true
+      buuiltCalendarService.getList(this.feedUrl, this.urlField, this.filter)
+        .then(events => {
+          this.events = events
+        })
+        .catch(error => {
+          console.error('Error loading events:', error)
+        })
+        .finally(() => {
+          this.isLoading = false
+        })
+    }
+  }
+}
+</script>
+
+<style scoped>
+.event-list {
+  margin-bottom: 1.5rem;
+}
+.no-events {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+</style>

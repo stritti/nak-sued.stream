@@ -3,9 +3,9 @@
     <template v-if="isLoading">
       <div
         style="max-width: 20rem;"
-        class="my-5 mx-auto align-items-center loading"
+        class="my-5 mx-auto align-items-center loading text-center"
       >
-        <BSpinner /> Lade Daten &hellip;
+        <BSpinner variant="primary" /> Lade Daten &hellip;
       </div>
     </template>
     <template v-if="congregation">
