@@ -4,7 +4,6 @@
     variant="dark"
     toggleable="md"
   >
-    <BContainer>
       <BNavbarBrand
         to="/"
         title="Nak-Sued.stream"
@@ -35,7 +34,6 @@
           </BNavItem>
         </BNavbarNav>
       </BCollapse>
-    </BContainer>
   </BNavbar>
 </template>
 

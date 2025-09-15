@@ -15,14 +15,14 @@ import congregationService from '@/services/congregation.service';
           :href="'tel:' + congregation.Fon"
           rel="nofollow"
         >
-          <b-icon-telephone-fill class="mr-2" />{{ congregation.Fon }}</a><br>
+          <IBiTelephoneFill class="mr-2" /> {{ congregation.Fon }}</a><br>
       </span>
       <span v-if="congregation.Mail">
         <a
           :href="'mailto:' + congregation.Mail"
           rel="nofollow"
         >
-          <b-icon-envelope-fill class="mr-2" />{{ congregation.Mail }}</a>
+          <IBiEnvelopeFill class="mr-2" /> {{ congregation.Mail }}</a>
       </span>
     </p>
     <p>
@@ -31,7 +31,7 @@ import congregationService from '@/services/congregation.service';
           :href="congregation.Website"
           rel="nofollow"
         >
-          <b-icon-globe2 class="mr-2" />{{ congregation.Website }}</a>
+          <IBiGlobe2 class="mr-2" /> {{ congregation.Website }}</a><br>
       </span>
     </p>
   </div>
