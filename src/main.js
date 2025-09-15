@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createBootstrap } from 'bootstrap-vue-next/plugins/createBootstrap'
+import { BSkeleton, BSkeletonWrapper } from 'bootstrap-vue-next'
 import VueGtag from 'vue-gtag'
 import Markdown from 'vue3-markdown-it'
 import App from './App.vue'
@@ -12,6 +13,10 @@ const app = createApp(App)
 
 // Verwende den Bootstrap-Plugin für globale Komponenten-Registrierung
 app.use(createBootstrap())
+
+// Registriere Skeleton-Komponenten manuell
+app.component('BSkeleton', BSkeleton)
+app.component('BSkeletonWrapper', BSkeletonWrapper)
 
 // Registriere zusätzliche benutzerdefinierte Komponenten
 app.component('BJumbotron', BJumbotron)
