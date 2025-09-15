@@ -8,8 +8,8 @@
       lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
     >
       <b-row>
-        <b-col md="3">
-          <b-img
+        <BCol md="3">
+          <BImg
             class="logo"
             src="@/assets/logo.png"
             fluid
@@ -25,8 +25,8 @@
               Ein privates Projekt zur Unterstützung der Gemeinden und
               Kirchenbezirke - seit Februar 2021.
             </p>
-            <b-row>
-              <b-col  md="6">
+            <BRow>
+              <BCol  md="6">
                 <h4>Übersicht der Streams</h4>
                 <p>Übersicht der aktuell registrierten Streams:</p>
                 <BButton
