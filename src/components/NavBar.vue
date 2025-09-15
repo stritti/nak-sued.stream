@@ -1,6 +1,5 @@
 <template>
   <b-navbar
-    type="dark"
     variant="dark"
     toggleable="md"
   >
@@ -11,7 +10,7 @@
       >
         <b-img
           class="d-inline-block align-top"
-          src="@/assets/logo.png"
+          src="/assets/logo.png"
           height="30"
           alt="nak-sued.stream Logo"
         />
