@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import congregationService from '../services/congregation.service'
 
 const routes = [
   {
@@ -50,7 +51,19 @@ const routes = [
   },
   {
     path: '/:url',
-    component: () => import(/* webpackChunkName: "streams" */ '../views/StreamsView.vue')
+    component: () => import(/* webpackChunkName: "streams" */ '../views/StreamsView.vue'),
+    beforeEnter: async (to, from, next) => {
+      // Aktualisiere das "Last Access"-Feld, wenn eine Gemeinde über ihre slug aufgerufen wird
+      const slug = to.params.url
+      if (slug) {
+        try {
+          await congregationService.updateLastAccess(slug)
+        } catch (error) {
+          console.error('Fehler beim Aktualisieren des Last Access:', error)
+        }
+      }
+      next()
+    }
   }
 ]
 

@@ -63,6 +63,31 @@ const congregationService = {
       Mail: resultList[0].fields.Mail
     }
   },
+  async updateLastAccess (slug) {
+    try {
+      // Zuerst die Gemeinde anhand des Slugs finden
+      const filter = encodeURIComponent(`({slug} = "${slug}")`)
+      const response = await airtableBase
+        .get(`${BASE}?view=${ACTIVE_VIEW}&filterByFormula=${filter}&maxRecords=1`)
+      
+      if (response.data.records && response.data.records.length > 0) {
+        const record = response.data.records[0]
+        
+        // Aktuelles Datum für "Last Access" setzen
+        await airtableBase.patch(`${BASE}/${record.id}`, {
+          fields: {
+            "Last Access": new Date().toISOString()
+          }
+        })
+        
+        return true
+      }
+      return false
+    } catch (error) {
+      console.error('Fehler beim Aktualisieren des Last Access Feldes:', error)
+      return false
+    }
+  },
   async request (data) {
     const response = await airtableBase.post(`${BASE}`, {
       records: [
