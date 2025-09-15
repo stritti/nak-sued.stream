@@ -23,9 +23,6 @@
           />
           <span v-if="hasYouTubeService">
             <h3>YouTube</h3>
-            <p>
-              Folgende Livestreams sind aktuell geplant:
-            </p>
             <EventList
               v-if="congregation"
               :feed-url="congregation.Feed"
