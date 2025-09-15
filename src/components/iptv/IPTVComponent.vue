@@ -8,6 +8,20 @@
           Mit IPTV können Sie Gottesdienste live verfolgen.
         </p>
 
+        <div class="mt-4">
+          <h4>Bereits registriert?</h4>
+          <p>
+            Melden Sie sich bei IPTV an, um auf die Inhalte zuzugreifen:
+          </p>
+          <BButton
+            variant="success"
+            href="https://iptv.nak.org"
+            target="_blank"
+          >
+            Anmelden
+          </BButton>
+        </div>
+
         <div v-if="registerUrl" class="mb-3">
           <h4>Noch kein Konto?</h4>
           <p>
@@ -22,19 +36,6 @@
           </BButton>
         </div>
 
-        <div class="mt-4">
-          <h4>Bereits registriert?</h4>
-          <p>
-            Melden Sie sich bei IPTV an, um auf die Inhalte zuzugreifen:
-          </p>
-          <BButton
-            variant="success"
-            href="https://iptv.nak.org"
-            target="_blank"
-          >
-            Anmelden
-          </BButton>
-        </div>
       </BCardText>
     </BCard>
 
