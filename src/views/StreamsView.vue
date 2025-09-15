@@ -22,6 +22,7 @@
             :register-url="congregation.IPTVRegisterURL"
           />
           <span v-if="hasYouTubeService">
+            <h3>YouTube</h3>
             <p>
               Folgende Livestreams sind aktuell geplant:
             </p>
