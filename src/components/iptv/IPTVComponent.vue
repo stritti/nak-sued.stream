@@ -22,7 +22,7 @@
           </BButton>
         </div>
 
-        <div v-if="registerUrl" class="mb-3">
+        <div v-if="registerUrl" class="my-4">
           <h4>Noch kein Konto?</h4>
           <p>
             Um IPTV nutzen zu können, benötigen Sie ein Konto. Registrieren Sie sich hier:
