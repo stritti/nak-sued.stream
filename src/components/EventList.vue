@@ -4,51 +4,50 @@
       v-if="error"
       v-text="error"
     />
-    <BSkeletonWrapper
+    <BPlaceholderWrapper
       :loading="isLoading"
       style="width:100%"
     >
       <template #loading>
         <BCard class="event my-3">
           <template #header>
-            <BSkeleton width="100%" />
+            <BPlaceholder width="100%" />
           </template>
-          <BSkeleton width="85%" />
-          <BSkeleton width="55%" />
-          <BSkeleton width="70%" />
+          <BPlaceholder width="85%" />
+          <BPlaceholder width="55%" />
+          <BPlaceholder width="70%" />
         </BCard>
         <BCard class="event my-3">
           <template #header>
-            <BSkeleton width="100%" />
+            <BPlaceholder width="100%" />
           </template>
-          <BSkeleton width="85%" />
-          <BSkeleton width="55%" />
-          <BSkeleton width="70%" />
+          <BPlaceholder width="85%" />
+          <BPlaceholder width="55%" />
+          <BPlaceholder width="70%" />
         </BCard>
       </template>
-      <template v-if="hasEvents">
+      <div v-if="hasEvents">
         <event-item
           v-for="event in eventList"
           :key="event.id"
           :event="event"
           class="my-3"
         />
-      </template>
-      <template v-else>
-        <BAlert
-          show
-          class="my-5"
+      </div>
+      <BAlert
+        v-else
+        show
+        class="my-5"
+      >
+        Aktuell sind keine Livestreams geplant.<br>
+        Weitere Gemeinden mit Livestreams finden sich im
+        <router-link
+          to="/verzeichnis"
         >
-          Aktuell sind keine Livestreams geplant.<br>
-          Weitere Gemeinden mit Livestreams finden sich im
-          <router-link
-            to="/verzeichnis"
-          >
-            <strong>Verzeichnis.</strong>
-          </router-link>
-        </BAlert>
-      </template>
-    </BSkeletonWrapper>
+          <strong>Verzeichnis.</strong>
+        </router-link>
+      </BAlert>
+    </BPlaceholderWrapper>
   </div>
 </template>
 
@@ -151,21 +150,21 @@ export default {
 </style>
 <template>
   <div class="event-list">
-    <BSkeletonWrapper v-if="isLoading">
+    <BPlaceholderWrapper v-if="isLoading">
       <div v-for="i in 3" :key="i" class="mb-3">
-        <BSkeleton width="85%" height="24px" class="mb-1"></BSkeleton>
-        <BSkeleton width="60%" height="16px" class="mb-1"></BSkeleton>
-        <BSkeleton width="40%" height="16px"></BSkeleton>
+        <BPlaceholder width="85%" height="24px" class="mb-1"></BPlaceholder>
+        <BPlaceholder width="60%" height="16px" class="mb-1"></BPlaceholder>
+        <BPlaceholder width="40%" height="16px"></BPlaceholder>
       </div>
-    </BSkeletonWrapper>
+    </BPlaceholderWrapper>
     <div v-else-if="events.length === 0" class="no-events">
       <p>Aktuell sind keine Livestreams geplant.</p>
     </div>
     <div v-else>
-      <EventItem 
-        v-for="event in events" 
-        :key="event.id" 
-        :event="event" 
+      <EventItem
+        v-for="event in events"
+        :key="event.id"
+        :event="event"
       />
     </div>
   </div>
