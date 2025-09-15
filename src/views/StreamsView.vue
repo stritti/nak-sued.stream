@@ -37,7 +37,6 @@
               verarbeitet werden.
             </p>
           </span>
-
         </BCol>
         <BCol
           md="4"
