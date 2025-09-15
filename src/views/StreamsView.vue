@@ -5,7 +5,7 @@
         style="max-width: 20rem;"
         class="my-5 mx-auto align-items-center loading"
       >
-        <b-spinner /> Lade Daten &hellip;
+        <BSpinner /> Lade Daten &hellip;
       </div>
     </template>
     <template v-if="congregation">
@@ -14,8 +14,8 @@
       <p>
         Folgende Livestreams sind aktuell geplant:
       </p>
-      <b-row>
-        <b-col
+      <BRow>
+        <BCol
           md="8"
           sm="12"
         >
@@ -30,8 +30,8 @@
             Ihre personenbezogenen Daten von der Streamingplattform (z. B. YouTube)
             verarbeitet werden.
           </p>
-        </b-col>
-        <b-col
+        </BCol>
+        <BCol
           md="4"
           sm="12"
         >
@@ -44,43 +44,43 @@
             :congregation="congregation"
             class="my-5"
           />
-        </b-col>
-      </b-row>
+        </BCol>
+      </BRow>
     </template>
     <template v-else-if="isPinRequired">
-      <b-card
+      <BCard
         v-if="!isLoading"
         title="Pin-Code"
         style="max-width: 350px;"
         class="mx-auto my-5 align-items-center"
       >
-        <b-card-text>
+        <BCardText>
           <pin-input
             class="input"
             :length="5"
             :auto-focus="true"
             @complete="onPinComplete"
           />
-        </b-card-text>
-        <b-card-text class="text-muted">
+        </BCardText>
+        <BCardText class="text-muted">
           Bitte Pin-Code eingeben.
-        </b-card-text>
+        </BCardText>
         <hr>
-        <b-card-text class="text-muted">
+        <BCardText class="text-muted">
           Die Zugangsdaten können bei der/dem Verantwortlichen angefragt werden:
-          <b-button
+          <BButton
             size="sm"
             variant="outline-primary"
             @click="$bvModal.show('bv-modal-pinrequest')"
           >
             Pin-Anfrage
-          </b-button>
+          </BButton>
           <pin-request-form :slug="$route.params.url" />
-        </b-card-text>
-        <b-card-text class="text-muted">
+        </BCardText>
+        <BCardText class="text-muted">
           Wir freuen uns über alle Zuschauer:innen
-        </b-card-text>
-      </b-card>
+        </BCardText>
+      </BCard>
     </template>
   </div>
 </template>
