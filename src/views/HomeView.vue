@@ -7,11 +7,11 @@
       header="NAK-Sued.stream"
       lead="Ein privater Service für die Gemeinden der Neuapostolischen Kirche Süddeutschlands"
     >
-      <b-row>
+      <BRow>
         <BCol md="3">
           <BImg
             class="logo"
-            src="@/assets/logo.png"
+            src="/assets/logo.png"
             fluid
           />
         </BCol>
@@ -35,8 +35,8 @@
                 >
                   Stream-Verzeichnis
                 </BButton>
-              </b-col>
-              <b-col>
+              </BCol>
+              <BCol>
                 <h4>Neuen Stream anmelden</h4>
                 <p>Einen Stream für eine Gemeinde oder Bezirk anmelden:</p>
                 <BButton
@@ -44,8 +44,8 @@
                 >
                   Aufnahmeantrag stellen &hellip;
                 </BButton>
-              </b-col>
-            </b-row>
+              </BCol>
+            </BRow>
           </div>
         </BCol>
       </BRow>
@@ -144,8 +144,8 @@
               </li>
             </ul>
           </section>
-        </b-col>
-        <b-col>
+        </BCol>
+        <BCol>
           <section>
             <h2>Video-Archiv der Neuapostolischen Kirche</h2>
             <p>
@@ -175,8 +175,8 @@
               </li>
             </ul>
           </section>
-        </b-col>
-      </b-row>
+        </BCol>
+      </BRow>
     </section>
   </div>
 </template>
