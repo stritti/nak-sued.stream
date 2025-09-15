@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createBootstrap } from 'bootstrap-vue-next/plugins/createBootstrap'
 import { BPlaceholder, BPlaceholderWrapper } from 'bootstrap-vue-next'
-import VueGtag from 'vue-gtag'
+import { configure } from "vue-gtag";
 import Markdown from 'vue3-markdown-it'
 import App from './App.vue'
 import router from './router'
@@ -26,8 +26,8 @@ app.component('VueMarkdown', Markdown)
 app.component('VueSimpleMarkdown', Markdown)
 
 // Google Analytics
-app.use(VueGtag, {
-  config: { id: 'G-7XBY4YQ68R' }
+configure({
+  tagId: 'G-7XBY4YQ68R'
 })
 
 // Router
