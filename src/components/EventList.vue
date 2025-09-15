@@ -4,27 +4,27 @@
       v-if="error"
       v-text="error"
     />
-    <b-skeleton-wrapper
+    <BSkeletonWrapper
       :loading="isLoading"
       style="width:100%"
     >
       <template #loading>
-        <b-card class="event my-3">
+        <BCard class="event my-3">
           <template #header>
-            <b-skeleton width="100%" />
+            <BSkeleton width="100%" />
           </template>
-          <b-skeleton width="85%" />
-          <b-skeleton width="55%" />
-          <b-skeleton width="70%" />
-        </b-card>
-        <b-card class="event my-3">
+          <BSkeleton width="85%" />
+          <BSkeleton width="55%" />
+          <BSkeleton width="70%" />
+        </BCard>
+        <BCard class="event my-3">
           <template #header>
-            <b-skeleton width="100%" />
+            <BSkeleton width="100%" />
           </template>
-          <b-skeleton width="85%" />
-          <b-skeleton width="55%" />
-          <b-skeleton width="70%" />
-        </b-card>
+          <BSkeleton width="85%" />
+          <BSkeleton width="55%" />
+          <BSkeleton width="70%" />
+        </BCard>
       </template>
       <template v-if="hasEvents">
         <event-item
@@ -35,7 +35,7 @@
         />
       </template>
       <template v-else>
-        <b-alert
+        <BAlert
           show
           class="my-5"
         >
@@ -46,9 +46,9 @@
           >
             <strong>Verzeichnis.</strong>
           </router-link>
-        </b-alert>
+        </BAlert>
       </template>
-    </b-skeleton-wrapper>
+    </BSkeletonWrapper>
   </div>
 </template>
 
@@ -137,6 +137,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.event-list {
+  margin-bottom: 1.5rem;
+}
+.no-events {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+</style>
 <template>
   <div class="event-list">
     <BSkeletonWrapper v-if="isLoading">
