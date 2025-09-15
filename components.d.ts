@@ -57,6 +57,8 @@ declare module 'vue' {
     IBiWarningS: typeof import('~icons/bi/warning-s')['default']
     IBiWarningSi: typeof import('~icons/bi/warning-si')['default']
     IBiWarningSign: typeof import('~icons/bi/warning-sign')['default']
+    IPTVComponent: typeof import('./src/components/iptv/IPTVComponent.vue')['default']
+    IptvInfoBox: typeof import('./src/components/iptv/IptvInfoBox.vue')['default']
     MetricCard: typeof import('./src/components/metric/MetricCard.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     NotificationList: typeof import('./src/components/notification/NotificationList.vue')['default']

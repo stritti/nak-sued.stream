@@ -33,6 +33,11 @@
               verarbeitet werden.
             </p>
           </span>
+          
+          <IPTVComponent 
+            v-if="hasIPTVService"
+            :register-url="congregation.IPTVRegisterURL"
+          />
         </BCol>
         <BCol
           md="4"
@@ -95,10 +100,11 @@ import StreamingContact from '@/components/StreamingContact.vue'
 import StreamingNotes from '@/components/StreamingNotes.vue'
 import PinRequestForm from '@/components/contact/PinRequestForm.vue'
 import PinInput from '@/components/PinInput.vue'
+import IPTVComponent from '@/components/iptv/IPTVComponent.vue'
 
 export default {
   name: 'Stream',
-  components: { PinInput, EventList, StreamingContact, StreamingNotes, PinRequestForm },
+  components: { PinInput, EventList, StreamingContact, StreamingNotes, PinRequestForm, IPTVComponent },
   metaInfo: {
     title: 'Stream'
   },
@@ -120,6 +126,18 @@ export default {
       } else {
         return this.congregation.Services === 'YouTube' ||
                this.congregation.Services.includes('YouTube');
+      }
+    },
+    hasIPTVService() {
+      if (!this.congregation || !this.congregation.Services) {
+        return false;
+      }
+      // Prüfen, ob Services ein Array ist oder ein String
+      if (Array.isArray(this.congregation.Services)) {
+        return this.congregation.Services.includes('IPTV');
+      } else {
+        return this.congregation.Services === 'IPTV' ||
+               this.congregation.Services.includes('IPTV');
       }
     }
   },
