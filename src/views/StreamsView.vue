@@ -71,7 +71,7 @@
           <BButton
             size="sm"
             variant="outline-primary"
-            @click="$bvModal.show('bv-modal-pinrequest')"
+            @click="showPinRequestModal"
           >
             Pin-Anfrage
           </BButton>
@@ -110,6 +110,11 @@ export default {
     this.loadIsPinRequired(this.$route.params.url)
   },
   methods: {
+    showPinRequestModal() {
+      // Use a different approach since $bvModal is not available in Bootstrap Vue Next
+      document.getElementById('bv-modal-pinrequest').classList.add('show')
+      document.getElementById('bv-modal-pinrequest').style.display = 'block'
+    },
     onPinComplete (pin) {
       this.loadCongregation(this.$route.params.url, pin)
     },

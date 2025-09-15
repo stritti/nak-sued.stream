@@ -4,7 +4,7 @@ import Markdown from 'vue3-markdown-it'
 import App from './App.vue'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
-import { BButton, BCard, BCardText, BCol, BContainer, BRow, BImg, BNavbar, 
+import BootstrapVueNext, { BButton, BCard, BCardText, BCol, BContainer, BRow, BImg, BNavbar, 
   BNavbarBrand, BNavbarToggle, BNavbarNav, BNavItem, BCollapse, BAlert, 
   BSpinner } from 'bootstrap-vue-next'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
