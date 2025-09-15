@@ -55,7 +55,7 @@
         class="mx-auto my-5 align-items-center"
       >
         <BCardText>
-          <pin-input
+          <PinInput
             class="input"
             :length="5"
             :auto-focus="true"

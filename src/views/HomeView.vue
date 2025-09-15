@@ -11,7 +11,7 @@
         <BCol md="3">
           <BImg
             class="logo"
-            src="/assets/logo.png"
+            src="@/assets/logo.png"
             fluid
           />
         </BCol>
