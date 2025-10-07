@@ -27,7 +27,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/compiler-sfc": "^3.5.22",
     "eslint": "^9.35.0",
-    "eslint-plugin-vue": "^9.31.0",
+    "eslint-plugin-vue": "^10.5.0",
     "sass": "^1.92.1",
     "unplugin-icons": "^22.4.2",
     "unplugin-vue-components": "^29.1.0",
