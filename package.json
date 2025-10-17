@@ -19,7 +19,7 @@
     "vue": "^3.5.22",
     "vue-gtag": "^3.6.2",
     "vue-meta": "^3.0.0-alpha.8",
-    "vue-router": "^4.5.1",
+    "vue-router": "^4.6.3",
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
