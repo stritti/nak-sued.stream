@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createBootstrap } from 'bootstrap-vue-next/plugins/createBootstrap'
 import { BPlaceholder, BPlaceholderWrapper } from 'bootstrap-vue-next'
-import { configure } from "vue-gtag";
+import { configure, createGtag  } from "vue-gtag";
 import Markdown from 'vue3-markdown-it'
 import App from './App.vue'
 import router from './router'
@@ -30,6 +30,10 @@ configure({
   tagId: 'G-7XBY4YQ68R'
 })
 
+const gtag = createGtag({
+  tagId: 'G-7XBY4YQ68R'
+})
+app.use(gtag)
 // Router
 app.use(router)
 
