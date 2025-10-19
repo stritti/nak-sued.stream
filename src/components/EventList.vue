@@ -4,10 +4,10 @@
       v-if="error"
       v-text="error"
     />
-    <BPlaceholderWrapper
-      :loading="isLoading"
-      style="width:100%"
-    >
+    <div style="width:100%">
+      <BPlaceholderWrapper
+        :loading="isLoading"
+      >
       <template #loading>
         <BCard class="event my-3">
           <template #header>
@@ -47,7 +47,8 @@
           <strong>Verzeichnis.</strong>
         </router-link>
       </BAlert>
-    </BPlaceholderWrapper>
+      </BPlaceholderWrapper>
+    </div>
   </div>
 </template>
 
