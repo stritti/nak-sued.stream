@@ -23,7 +23,7 @@
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.2.6",
+    "@iconify-json/bi": "^1.2.7",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/compiler-sfc": "^3.5.30",
     "eslint": "^9.37.0",
