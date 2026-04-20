@@ -16,7 +16,7 @@
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.44.2",
     "dotenv": "^17.2.3",
-    "vue": "^3.5.22",
+    "vue": "^3.5.32",
     "vue-gtag": "^3.6.2",
     "vue-meta": "^3.0.0-alpha.8",
     "vue-router": "^4.6.3",
