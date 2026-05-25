@@ -30,7 +30,7 @@
     "eslint-plugin-vue": "^10.9.1",
     "sass": "^1.99.0",
     "unplugin-icons": "^23.0.1",
-    "unplugin-vue-components": "^32.0.0",
+    "unplugin-vue-components": "^32.1.0",
     "vite": "^7.3.2",
     "vite-plugin-pwa": "^1.2.0"
   },
