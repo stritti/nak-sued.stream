@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "axios": "^1.19.0",
+    "axios": "^1.20.0",
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.46.3",
     "dotenv": "^17.4.2",
