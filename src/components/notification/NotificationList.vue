@@ -13,16 +13,17 @@
       >
         <h3>{{ item.Titel }}</h3>
         <Suspense>
-          <Markdown>{{ item.Message.replaceAll('\\', '') }}</Markdown>
+          <Markdown :value="item.Message.replaceAll('\\', '')" ></Markdown>
         </Suspense>
       </b-alert>
     </div>
   </div>
 </template>
 
-<script>
-import { Markdown } from '@comark/vue'
+<script >
 import globalNotification from '@/services/globalNotification.service'
+import { Markdown } from '@comark/vue'
+
 export default {
   name: 'NotificationList',
   data () {
@@ -33,7 +34,7 @@ export default {
   computed: {
     hasNotifications () {
       if (this.notificationList === null || this.notificationList.length === 0) {
-        return true
+        return false
       }
       return true
     }

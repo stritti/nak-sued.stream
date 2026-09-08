@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createBootstrap } from 'bootstrap-vue-next/plugins/createBootstrap'
 import { BPlaceholder, BPlaceholderWrapper } from 'bootstrap-vue-next'
 import { configure, createGtag  } from "vue-gtag";
+import { Markdown } from '@comark/vue'
 import App from './App.vue'
 import router from './router'
 import BJumbotron from './components/BJumbotron.vue'
@@ -19,6 +20,7 @@ app.component('BPlaceholderWrapper', BPlaceholderWrapper)
 
 // Registriere zusätzliche benutzerdefinierte Komponenten
 app.component('BJumbotron', BJumbotron)
+app.component('Markdown', Markdown)
 
 // Google Analytics
 configure({
