@@ -12,13 +12,16 @@
         :variant="item.Level"
       >
         <h3>{{ item.Titel }}</h3>
-        <vue-simple-markdown :source="item.Message.replaceAll('\\', '')" />
+        <Suspense>
+          <Markdown>{{ item.Message.replaceAll('\\', '') }}</Markdown>
+        </Suspense>
       </b-alert>
     </div>
   </div>
 </template>
 
 <script>
+import { Markdown } from '@comark/vue'
 import globalNotification from '@/services/globalNotification.service'
 export default {
   name: 'NotificationList',

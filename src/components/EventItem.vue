@@ -25,7 +25,9 @@
         />&nbsp;{{ event.url }}
       </a>
     </b-card-text>
-    <vue-simple-markdown :source="event.description" />
+    <Suspense>
+      <Markdown>{{ event.description }}</Markdown>
+    </Suspense>
   </b-card>
 </template>
 

@@ -16,7 +16,9 @@
         >#</a>
         {{ faq.Frage }}
       </h5>
-      <vue-simple-markdown :source="faq.Antwort.replaceAll('\\', '')" />
+      <Suspense>
+        <Markdown>{{ faq.Antwort.replaceAll('\\', '') }}</Markdown>
+      </Suspense>
     </section>
     <div
       v-if="isLoading"
