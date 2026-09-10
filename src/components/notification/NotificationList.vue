@@ -12,7 +12,8 @@
         :variant="item.Level"
       >
         <h3>{{ item.Titel }}</h3>
-        <vue-simple-markdown :source="item.Message.replaceAll('\\', '')" />
+        <Suspense>
+          <Markdown :value="item.Message.replaceAll('\\', '')" /></Suspense>
       </b-alert>
     </div>
   </div>
@@ -30,7 +31,7 @@ export default {
   computed: {
     hasNotifications () {
       if (this.notificationList === null || this.notificationList.length === 0) {
-        return true
+        return false
       }
       return true
     }
