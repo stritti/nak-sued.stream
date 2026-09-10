@@ -26,7 +26,7 @@
       </a>
     </b-card-text>
     <Suspense>
-      <Markdown>{{ event.description }}</Markdown>
+      <Markdown :value="event.description" />
     </Suspense>
   </b-card>
 </template>

@@ -17,7 +17,7 @@
         {{ faq.Frage }}
       </h5>
       <Suspense>
-        <Markdown>{{ faq.Antwort.replaceAll('\\', '') }}</Markdown>
+        <Markdown :value="faq.Antwort.replaceAll('\\', '')" />
       </Suspense>
     </section>
     <div
