@@ -20,6 +20,7 @@
     "vue-gtag": "^3.7.1",
     "vue-meta": "^3.0.0-alpha.8",
     "vue-router": "^5.3.1",
+    "@comark/vue": "^0.6.2",
     "vue3-markdown-it": "^1.0.10"
   },
   "devDependencies": {
