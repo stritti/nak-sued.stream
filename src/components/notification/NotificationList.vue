@@ -13,14 +13,16 @@
       >
         <h3>{{ item.Titel }}</h3>
         <Suspense>
-          <Markdown :value="item.Message.replaceAll('\\', '')" /></Suspense>
+<Markdown :value="item.Message.replaceAll('\\', '')" /></Suspense>
       </b-alert>
     </div>
   </div>
 </template>
 
-<script>
+<script >
 import globalNotification from '@/services/globalNotification.service'
+import { Markdown } from '@comark/vue'
+
 export default {
   name: 'NotificationList',
   data () {

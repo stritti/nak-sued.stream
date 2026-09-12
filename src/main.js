@@ -20,8 +20,6 @@ app.component('BPlaceholderWrapper', BPlaceholderWrapper)
 
 // Registriere zusätzliche benutzerdefinierte Komponenten
 app.component('BJumbotron', BJumbotron)
-
-// Registriere Markdown-Komponente
 app.component('Markdown', Markdown)
 
 // Google Analytics
